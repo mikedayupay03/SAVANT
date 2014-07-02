@@ -1,9 +1,9 @@
 package com.example.savant;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 
-public class Create_Site extends Activity {
+public class Create_Site extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
