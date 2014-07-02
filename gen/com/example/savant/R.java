@@ -1204,7 +1204,7 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_create__site=0x7f030018;
         public static final int activity_main=0x7f030019;
-        public static final int activity_splash_screen=0x7f03001a;
+        public static final int activity_view__site=0x7f03001a;
         public static final int support_simple_spinner_dropdown_item=0x7f03001b;
     }
     public static final class menu {
@@ -1259,6 +1259,7 @@ containing a value of this type.
         public static final int siteName=0x7f0a0010;
         public static final int title_activity_create__site=0x7f0a000f;
         public static final int title_activity_splash_screen=0x7f0a0012;
+        public static final int title_activity_view__site=0x7f0a0015;
     }
     public static final class style {
         /** 

@@ -1,4 +1,6 @@
-package com.example.savant;
+package com.dlsu.savant;
+
+import com.example.savant.R;
 
 import android.app.Activity;
 import android.content.Intent;

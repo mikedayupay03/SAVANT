@@ -334,7 +334,7 @@ int layout abc_search_view 0x7f030016
 int layout abc_simple_decor 0x7f030017
 int layout activity_create__site 0x7f030018
 int layout activity_main 0x7f030019
-int layout activity_splash_screen 0x7f03001a
+int layout activity_view__site 0x7f03001a
 int layout support_simple_spinner_dropdown_item 0x7f03001b
 int menu main_activity_actions 0x7f0c0000
 int string abc_action_bar_home_description 0x7f0a0001
@@ -358,6 +358,7 @@ int string hint_municipality 0x7f0a0011
 int string siteName 0x7f0a0010
 int string title_activity_create__site 0x7f0a000f
 int string title_activity_splash_screen 0x7f0a0012
+int string title_activity_view__site 0x7f0a0015
 int style AppBaseTheme 0x7f0b008b
 int style AppTheme 0x7f0b008c
 int style ButtonBar 0x7f0b008e

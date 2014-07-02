@@ -1,4 +1,4 @@
-package com.example.savant;
+package com.dlsu.savant;
 
 public class Site {
 	
