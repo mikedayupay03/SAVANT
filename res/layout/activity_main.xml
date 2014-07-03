@@ -9,25 +9,12 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="Create New Site"
+        android:text="View Site"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:background="#000000"
         android:padding="20sp" />
     
-    <Button
-        android:id="@+id/viewSite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/newSite"
-        android:layout_alignRight="@+id/newSite"
-        android:layout_below="@id/newSite"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="20sp"
-        android:background="#000000"
-        android:padding="20sp"
-        android:text="View Site"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+  
 
 </RelativeLayout>

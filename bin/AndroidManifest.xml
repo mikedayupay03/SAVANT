@@ -39,6 +39,9 @@
         <activity
             android:name="com.dlsu.savant.View_Site"
             android:label="@string/title_activity_view__site" >
+            <meta-data 
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dlsu.savant.MainActivity"/>
         </activity>
         
     </application>

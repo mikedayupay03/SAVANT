@@ -4,23 +4,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="${packageName}.${activityClass}" >
-    
+
     <TextView android:id="@+id/siteName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
         android:text="@string/siteName"
         android:textSize="20sp"
-        android:layout_marginBottom="20dp" />
-    
+        android:textStyle="bold" />
+
     <TextView android:id="@+id/nameOfSite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/siteName"
         android:layout_alignLeft="@id/siteName"
+        android:layout_below="@id/siteName"
+        android:text="aaaaa"
+        android:textSize="17sp" />
+
+    <TextView android:id="@+id/Municipality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/siteName"
+        android:layout_below="@id/nameOfSite"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Municipality"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView android:id="@+id/nameOfMun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/siteName"
+        android:layout_below="@+id/Municipality"
+        android:text="aaaaa"
+        android:textSize="17sp" />
+
+    <TextView android:id="@+id/Province"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/siteName"
+        android:layout_below="@+id/nameOfMun"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Province"
+        android:textStyle="bold"
         android:textSize="20sp" />
-
-
+    
+    <TextView android:id="@+id/nameOfProv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Province"
+        android:layout_alignLeft="@id/siteName" 
+        android:textSize="17sp" />
 
 </RelativeLayout>

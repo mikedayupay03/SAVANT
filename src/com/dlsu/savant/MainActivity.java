@@ -12,24 +12,14 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-	Button addSite;
+	
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        addSite = (Button)findViewById(R.id.newSite);	
-        addSite.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent newSite = new Intent(v.getContext(), Create_Site.class);
-				startActivity(newSite);
-				
-			}
-		});
+        
     }
     
     @Override

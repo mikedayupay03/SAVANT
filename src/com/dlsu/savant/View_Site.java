@@ -16,5 +16,6 @@ public class View_Site extends Activity {
 		
 		nameOfSite = (TextView)findViewById(R.id.nameOfSite);
 		nameOfSite.setText("Leron");
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 }
