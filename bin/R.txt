@@ -237,8 +237,9 @@ int drawable abc_textfield_searchview_right_holo_dark 0x7f020055
 int drawable abc_textfield_searchview_right_holo_light 0x7f020056
 int drawable dlsu_logo 0x7f020057
 int drawable ic_action_new 0x7f020058
-int drawable ic_launcher 0x7f020059
-int drawable light_green 0x7f02005a
+int drawable ic_action_search 0x7f020059
+int drawable ic_launcher 0x7f02005a
+int drawable light_green 0x7f02005b
 int id Municipality 0x7f050045
 int id Province 0x7f050047
 int id action_bar 0x7f05001c
@@ -252,6 +253,7 @@ int id action_context_bar 0x7f05001d
 int id action_menu_divider 0x7f050016
 int id action_menu_presenter 0x7f050017
 int id action_mode_close_button 0x7f050024
+int id action_search 0x7f05004a
 int id activity_chooser_view_content 0x7f050025
 int id addSite 0x7f050049
 int id always 0x7f05000b
@@ -357,6 +359,7 @@ int string abc_searchview_description_submit 0x7f0a0007
 int string abc_searchview_description_voice 0x7f0a0008
 int string abc_shareactionprovider_share_with 0x7f0a000c
 int string abc_shareactionprovider_share_with_application 0x7f0a000b
+int string action_search 0x7f0a0017
 int string app_name 0x7f0a000d
 int string dummy_button 0x7f0a0013
 int string dummy_content 0x7f0a0014

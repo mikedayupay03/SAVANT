@@ -11,5 +11,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_view__site">View_Site</string>
     <string name="title_activity_splash">Splash</string>
+    <string name="action_search">Search</string>
 
 </resources>

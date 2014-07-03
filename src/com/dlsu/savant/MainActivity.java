@@ -36,6 +36,9 @@ public class MainActivity extends Activity {
     			Intent newSite = new Intent(this, Create_Site.class);
     			startActivity(newSite);
     			return true;
+    		case R.id.action_search:
+    			//openSearch();
+    			return true;
     			
     		default:
     			return super.onOptionsItemSelected(item);

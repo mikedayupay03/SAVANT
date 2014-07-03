@@ -16,7 +16,7 @@
 		<!-- Splash Screen -->
         <activity
             android:name="com.dlsu.savant.Splash"
-            android:label="@string/title_activity_splash"
+            android:label="@string/app_name"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
