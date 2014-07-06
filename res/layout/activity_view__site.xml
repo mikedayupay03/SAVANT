@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
     tools:context="${packageName}.${activityClass}" >
 
     <TextView android:id="@+id/siteName"
@@ -66,7 +67,7 @@
         android:paddingTop="30sp"
         android:text="0.0"
         android:textSize="50sp"
-        android:textcolor="#ffffff" />
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/nameOfDate"
@@ -91,17 +92,17 @@
         android:id="@+id/surveyScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/nameOfDate"
         android:layout_marginTop="10sp"
-        android:paddingLeft="13sp"
-        android:paddingRight="190sp"
-        android:paddingTop="5sp"
-        android:paddingBottom="5sp"
         android:background="#21AD0C"
-        android:textColor="#FFFFFF"
+        android:fitsSystemWindows="true"
+        android:paddingBottom="5sp"
+        android:paddingLeft="13sp"
+        android:paddingTop="5sp"
         android:text="Survey Score"
-        android:textSize="20sp"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
 </RelativeLayout>
