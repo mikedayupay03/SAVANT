@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 public class Create_Site extends ActionBarActivity {
 	
-	public final static String EXTRA_MESSAGE = "com.dlsu.savant.MESSAGE";
+	// final static String EXTRA_MESSAGE = "com.dlsu.savant.MESSAGE";
 	Button createSite;
 	
 	@Override
@@ -26,17 +26,17 @@ public class Create_Site extends ActionBarActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				Site siteObject = new Site();
 				Intent intent = new Intent(Create_Site.this, View_Site.class);
 				EditText site = (EditText)findViewById(R.id.editSiteName);
 				EditText mun = (EditText)findViewById(R.id.editMunicipality);
 				EditText prov = (EditText)findViewById(R.id.editProvince);
-				String siteName = site.getText().toString();
-				String munName = mun.getText().toString();
-				String provName = prov.getText().toString();
-				intent.putExtra(EXTRA_MESSAGE, siteName);
-				intent.putExtra(EXTRA_MESSAGE, munName);
-				intent.putExtra(EXTRA_MESSAGE, provName);
-				startActivity(intent);
+				siteObject.setSiteName(site.getText().toString());
+				siteObject.setSiteMun(mun.getText().toString());
+				siteObject.setSiteProvince(prov.getText().toString());
+				intent.putExtra("SiteObject", siteObject);
+				startActivityForResult(intent, 1);
+				
 				
 			}
 		});

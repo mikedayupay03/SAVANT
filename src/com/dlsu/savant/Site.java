@@ -1,6 +1,8 @@
 package com.dlsu.savant;
 
-public class Site {
+import java.io.Serializable;
+
+public class Site implements Serializable{
 	
 	private String siteName;
 	private String siteMun;
@@ -10,6 +12,14 @@ public class Site {
 	private String siteExposure;
 	private double siteSens;
 	private double siteAdaptCap;
+	
+	public Site(){
+		super();
+	}
+	
+	public Site(String siteName){
+		this.siteName = siteName;
+	}
 	
 	public Site(String siteName, String siteMun, String siteProvince, String dateCreated, String siteExposure, double siteSens, double siteAdaptCap){
 		this.siteName = siteName;
@@ -76,8 +86,10 @@ public class Site {
 		return siteAdaptCap;
 	}
 	
-	public double getAveScore(){
+	public String getAveScore(){
+		String ave_score;
 		aveScore = (getSiteSens() + getSiteAdaptCap()) / 2;
-		return aveScore;
+		ave_score = String.valueOf(aveScore);
+		return ave_score;
 	}
 }

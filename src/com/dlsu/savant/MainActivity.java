@@ -7,19 +7,26 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ListView;
 
 public class MainActivity extends Activity {
 
-	
+	private ListView listsite;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
+        Site site_data[] = new Site[]{
+        		new Site("Leron"),
+        		new Site("Leron")
+        		
+        };
         
+        listsite = (ListView)findViewById(R.id.listSites);
+        SiteAdapter adapter = new SiteAdapter(this, R.layout.list_sites, site_data);
+        listsite.setAdapter(adapter);
     }
     
     @Override

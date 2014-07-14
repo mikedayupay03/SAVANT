@@ -17,18 +17,11 @@ public class View_Site extends Activity {
 		setContentView(R.layout.activity_view__site);
 		
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-		
-		Intent intent = getIntent();
-		String siteName = intent.getStringExtra(Create_Site.EXTRA_MESSAGE);
-		//String munName = intent.getStringExtra(Create_Site.EXTRA_MESSAGE);
-		//String provName = intent.getStringExtra(Create_Site.EXTRA_MESSAGE);
-		TextView site = (TextView)findViewById(R.id.nameOfSite);
-		//TextView mun = (TextView)findViewById(R.id.nameOfMun);
-		//TextView date = (TextView)findViewById(R.id.nameOfDate);
-		
-		site.setText(siteName);
-		//mun.setText(munName +", " +provName);
-		//date.setText(Calendar.DATE);
+		Site siteObj = (Site) getIntent().getSerializableExtra("SiteObject");
+		TextView siteName = (TextView)findViewById(R.id.nameOfSite);
+		TextView munName = (TextView)findViewById(R.id.nameOfMun);
+		siteName.setText(siteObj.getSiteName());
+		munName.setText(siteObj.getSiteMun()+", "+ siteObj.getSiteProvince());
 		
 	}
 }
