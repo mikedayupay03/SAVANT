@@ -13,10 +13,13 @@ import android.widget.ListView;
 public class View_Site extends Activity {
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	TextView nameOfSite;
 	//Initialize the list of view site
 	String[] viewSScoreOpt =  new String []
 			{ "Exposure", "Sensitivity", "Adaptive Capacity"};
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 
@@ -28,6 +31,7 @@ public class View_Site extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_view__site);
 		
+<<<<<<< HEAD
 <<<<<<< HEAD
 		listScore = (ListView)findViewById(R.id.listscoreopt);
 		nameOfSite = (TextView)findViewById(R.id.nameOfSite);
@@ -50,6 +54,15 @@ public class View_Site extends Activity {
 		site.setText(siteName);
 		//mun.setText(munName +", " +provName);
 		//date.setText(Calendar.DATE);
+		
+>>>>>>> origin/master
+=======
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+		Site siteObj = (Site) getIntent().getSerializableExtra("SiteObject");
+		TextView siteName = (TextView)findViewById(R.id.nameOfSite);
+		TextView munName = (TextView)findViewById(R.id.nameOfMun);
+		siteName.setText(siteObj.getSiteName());
+		munName.setText(siteObj.getSiteMun()+", "+ siteObj.getSiteProvince());
 		
 >>>>>>> origin/master
 	}
