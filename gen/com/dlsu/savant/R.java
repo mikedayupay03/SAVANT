@@ -1356,9 +1356,10 @@ containing a value of this type.
         public static final int activity_main=0x7f030019;
         public static final int activity_splash=0x7f03001a;
         public static final int activity_view__site=0x7f03001b;
-        public static final int list_scores=0x7f03001c;
-        public static final int list_sites=0x7f03001d;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
+        public static final int list_options=0x7f03001c;
+        public static final int list_scores=0x7f03001d;
+        public static final int list_sites=0x7f03001e;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001f;
     }
     public static final class menu {
         public static final int main_activity_actions=0x7f0c0000;
