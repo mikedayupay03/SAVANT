@@ -1,6 +1,8 @@
 package com.dlsu.savant;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class Site implements Serializable{
 	
@@ -8,7 +10,7 @@ public class Site implements Serializable{
 	private String siteMun;
 	private String siteProvince;
 	private String dateCreated;
-	private double aveScore;
+	private double aveScore = 0;
 	private String siteExposure;
 	private double siteSens;
 	private double siteAdaptCap;
@@ -59,7 +61,10 @@ public class Site implements Serializable{
 	}
 	
 	public String getDateCreated(){
-		return dateCreated;
+		Calendar c = Calendar.getInstance();
+		SimpleDateFormat df = new SimpleDateFormat("MMMM-dd-yyyy");
+		String date = df.format(c.getTime());
+		return date;
 	}
 	
 	public void setSiteExposure(String siteExposure){

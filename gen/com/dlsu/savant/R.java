@@ -956,6 +956,12 @@ containing a value of this type.
  Minimum width of the search view text entry area. 
          */
         public static final int abc_search_view_text_min_width=0x7f08000c;
+        /** 
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+    
+         */
+        public static final int activity_horizontal_margin=0x7f080015;
         /**  The platform's desired fixed height for a dialog along the major axis
          (the screen is in portrait). This may be either a fraction or a dimension.
  The platform's desired fixed height for a dialog along the major axis
@@ -1077,15 +1083,141 @@ containing a value of this type.
         public static final int abc_textfield_searchview_holo_light=0x7f020054;
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int dlsu_logo=0x7f020057;
-        public static final int ic_action_new=0x7f020058;
-        public static final int ic_action_search=0x7f020059;
-        public static final int ic_launcher=0x7f02005a;
-        public static final int light_green=0x7f02005b;
+        public static final int adapt_10_high=0x7f020057;
+        public static final int adapt_10_low=0x7f020058;
+        public static final int adapt_11_high=0x7f020059;
+        public static final int adapt_11_low=0x7f02005a;
+        public static final int adapt_12_high=0x7f02005b;
+        public static final int adapt_12_low=0x7f02005c;
+        public static final int adapt_13_high=0x7f02005d;
+        public static final int adapt_13_low=0x7f02005e;
+        public static final int adapt_14_high=0x7f02005f;
+        public static final int adapt_14_low=0x7f020060;
+        public static final int adapt_15_high=0x7f020061;
+        public static final int adapt_15_low=0x7f020062;
+        public static final int adapt_17_high=0x7f020063;
+        public static final int adapt_17_low=0x7f020064;
+        public static final int adapt_18_high=0x7f020065;
+        public static final int adapt_18_low=0x7f020066;
+        public static final int adapt_19_high=0x7f020067;
+        public static final int adapt_19_low=0x7f020068;
+        public static final int adapt_1_high=0x7f020069;
+        public static final int adapt_1_low=0x7f02006a;
+        public static final int adapt_20_high=0x7f02006b;
+        public static final int adapt_20_low=0x7f02006c;
+        public static final int adapt_21_high=0x7f02006d;
+        public static final int adapt_21_low=0x7f02006e;
+        public static final int adapt_22_high=0x7f02006f;
+        public static final int adapt_22_low=0x7f020070;
+        public static final int adapt_23_high=0x7f020071;
+        public static final int adapt_23_low=0x7f020072;
+        public static final int adapt_24_high=0x7f020073;
+        public static final int adapt_24_low=0x7f020074;
+        public static final int adapt_25_high=0x7f020075;
+        public static final int adapt_25_low=0x7f020076;
+        public static final int adapt_26_high=0x7f020077;
+        public static final int adapt_26_low=0x7f020078;
+        public static final int adapt_2_high=0x7f020079;
+        public static final int adapt_2_low=0x7f02007a;
+        public static final int adapt_3_high=0x7f02007b;
+        public static final int adapt_3_low=0x7f02007c;
+        public static final int adapt_4_high=0x7f02007d;
+        public static final int adapt_4_low=0x7f02007e;
+        public static final int adapt_5_high=0x7f02007f;
+        public static final int adapt_5_low=0x7f020080;
+        public static final int adapt_6_high=0x7f020081;
+        public static final int adapt_6_low=0x7f020082;
+        public static final int adapt_8_high=0x7f020083;
+        public static final int adapt_8_low=0x7f020084;
+        public static final int adapt_9_high=0x7f020085;
+        public static final int adapt_9_low=0x7f020086;
+        public static final int answer=0x7f020087;
+        public static final int ave_scr_bg_color_high=0x7f020088;
+        public static final int ave_scr_bg_color_high_tile=0x7f020089;
+        public static final int ave_scr_bg_color_low=0x7f02008a;
+        public static final int ave_scr_bg_color_low_tile=0x7f02008b;
+        public static final int ave_scr_bg_color_med=0x7f02008c;
+        public static final int ave_scr_bg_color_med_tile=0x7f02008d;
+        public static final int ave_scr_bg_color_na=0x7f02008e;
+        public static final int ave_scr_bg_color_na_tile=0x7f02008f;
+        public static final int back_white=0x7f020090;
+        public static final int background=0x7f020091;
+        public static final int background_tile=0x7f020092;
+        public static final int create_new_site_btn=0x7f020093;
+        public static final int density_high=0x7f020094;
+        public static final int density_low=0x7f020095;
+        public static final int density_med=0x7f020096;
+        public static final int divider=0x7f020097;
+        public static final int dlsu_logo=0x7f020098;
+        public static final int email=0x7f020099;
+        public static final int email_cancel=0x7f02009a;
+        public static final int header_bg=0x7f02009b;
+        public static final int header_bg_tile=0x7f02009c;
+        public static final int ic_action_new=0x7f02009d;
+        public static final int ic_action_search=0x7f02009e;
+        public static final int ic_launcher=0x7f02009f;
+        public static final int image_not_found=0x7f0200a0;
+        public static final int label_bottom_adpt_cpcty=0x7f0200a1;
+        public static final int labelbottom=0x7f0200a2;
+        public static final int light_green=0x7f0200a3;
+        public static final int new_email=0x7f0200a4;
+        public static final int next=0x7f0200a5;
+        public static final int options_white=0x7f0200a6;
+        public static final int picture_border_1=0x7f0200a7;
+        public static final int picture_border_2=0x7f0200a8;
+        public static final int picture_border_3=0x7f0200a9;
+        public static final int picture_border_4=0x7f0200aa;
+        public static final int picture_border_5=0x7f0200ab;
+        public static final int picture_border_adpt_cpcty_2=0x7f0200ac;
+        public static final int picture_border_adpt_cpcty_3=0x7f0200ad;
+        public static final int picture_border_adpt_cpcty_4=0x7f0200ae;
+        public static final int picture_border_adpt_cpcty_5=0x7f0200af;
+        public static final int savant_home_icon=0x7f0200b0;
+        public static final int savant_icon=0x7f0200b1;
+        public static final int seek_bar_progress=0x7f0200b2;
+        public static final int seek_bar_thumb_normal=0x7f0200b3;
+        public static final int seekbar_background=0x7f0200b4;
+        public static final int seekbar_progress_bg=0x7f0200b5;
+        public static final int sens_10_high=0x7f0200b6;
+        public static final int sens_10_low=0x7f0200b7;
+        public static final int sens_11_high=0x7f0200b8;
+        public static final int sens_11_low=0x7f0200b9;
+        public static final int sens_11_med=0x7f0200ba;
+        public static final int sens_12_high=0x7f0200bb;
+        public static final int sens_12_low=0x7f0200bc;
+        public static final int sens_13_high=0x7f0200bd;
+        public static final int sens_13_low=0x7f0200be;
+        public static final int sens_13_medium=0x7f0200bf;
+        public static final int sens_14_high=0x7f0200c0;
+        public static final int sens_14_low=0x7f0200c1;
+        public static final int sens_15_high=0x7f0200c2;
+        public static final int sens_15_low=0x7f0200c3;
+        public static final int sens_1_high=0x7f0200c4;
+        public static final int sens_1_low=0x7f0200c5;
+        public static final int sens_2_high=0x7f0200c6;
+        public static final int sens_2_low=0x7f0200c7;
+        public static final int sens_3_high=0x7f0200c8;
+        public static final int sens_3_low=0x7f0200c9;
+        public static final int sens_4_high=0x7f0200ca;
+        public static final int sens_5_high=0x7f0200cb;
+        public static final int sens_5_low=0x7f0200cc;
+        public static final int sens_6_high=0x7f0200cd;
+        public static final int sens_6_low=0x7f0200ce;
+        public static final int sens_7_high=0x7f0200cf;
+        public static final int sens_7_low=0x7f0200d0;
+        public static final int sens_8_high=0x7f0200d1;
+        public static final int sens_8_low=0x7f0200d2;
+        public static final int sens_9_high=0x7f0200d3;
+        public static final int sens_9_low=0x7f0200d4;
+        public static final int start_survey_button=0x7f0200d5;
+        public static final int start_survey_button2=0x7f0200d6;
+        public static final int stripe_bg=0x7f0200d7;
+        public static final int view_all_sites_btn=0x7f0200d8;
+        public static final int white_next=0x7f0200d9;
+        public static final int white_prev=0x7f0200da;
     }
     public static final class id {
         public static final int Municipality=0x7f050045;
-        public static final int TextView01=0x7f05004f;
         public static final int action_bar=0x7f05001c;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f05001b;
@@ -1097,19 +1229,17 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_search=0x7f050054;
+        public static final int action_search=0x7f050053;
         public static final int activity_chooser_view_content=0x7f050025;
-        public static final int addSite=0x7f050053;
+        public static final int addSite=0x7f050052;
         public static final int always=0x7f05000b;
         public static final int ave_Score=0x7f050049;
-        public static final int ave_score=0x7f050051;
+        public static final int ave_score=0x7f050050;
         public static final int averageScore=0x7f05004a;
         public static final int beginning=0x7f050011;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
-        public static final int container1=0x7f05004c;
-        public static final int container2=0x7f05004d;
-        public static final int dateCreated=0x7f050052;
+        public static final int dateCreated=0x7f050051;
         public static final int date_created=0x7f050047;
         public static final int default_activity_button=0x7f050028;
         public static final int dialog=0x7f05000e;
@@ -1128,9 +1258,9 @@ containing a value of this type.
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
         public static final int listMode=0x7f050001;
+        public static final int listScore=0x7f05004c;
         public static final int listSites=0x7f050043;
         public static final int list_item=0x7f050029;
-        public static final int listscoreopt=0x7f050050;
         public static final int middle=0x7f050012;
         public static final int municipality=0x7f05003e;
         public static final int nameOfDate=0x7f050048;
@@ -1143,6 +1273,7 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f050019;
         public static final int province=0x7f050040;
         public static final int radio=0x7f05002f;
+        public static final int score_level=0x7f05004f;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1161,13 +1292,14 @@ containing a value of this type.
         public static final int split_action_bar=0x7f05001e;
         public static final int startSurvey=0x7f050042;
         public static final int submit_area=0x7f050039;
+        public static final int surveyQuestion=0x7f05004e;
         public static final int surveyScore=0x7f05004b;
         public static final int tabMode=0x7f050002;
-        public static final int textView1=0x7f05004e;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
+        public static final int viewScore=0x7f05004d;
         public static final int withText=0x7f05000c;
     }
     public static final class integer {
@@ -1224,8 +1356,9 @@ containing a value of this type.
         public static final int activity_main=0x7f030019;
         public static final int activity_splash=0x7f03001a;
         public static final int activity_view__site=0x7f03001b;
-        public static final int list_sites=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int list_scores=0x7f03001c;
+        public static final int list_sites=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int main_activity_actions=0x7f0c0000;
