@@ -40,10 +40,7 @@ public class View_Site extends Activity {
 		setContentView(R.layout.activity_view__site);
 		
 
-		listScore = (ListView)findViewById(R.id.listscoreopt);
-		nameOfSite = (TextView)findViewById(R.id.nameOfSite);
-		nameOfSite.setText("Leron");
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+		listScore = (ListView)findViewById(R.id.listScore);
 		
 		arrayAdapter1 = new ArrayAdapter<String>(this, R.layout.list_options,viewSScoreOpt);
 		listScore.setAdapter(arrayAdapter1);
@@ -51,14 +48,14 @@ public class View_Site extends Activity {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		Intent intent = getIntent();
-		String siteName = intent.getStringExtra(Create_Site.EXTRA_MESSAGE);
+		//String siteName = intent.getStringExtra(Create_Site.EXTRA_MESSAGE);
 		//String munName = intent.getStringExtra(Create_Site.EXTRA_MESSAGE);
 		//String provName = intent.getStringExtra(Create_Site.EXTRA_MESSAGE);
-		TextView site = (TextView)findViewById(R.id.nameOfSite);
+		//TextView site = (TextView)findViewById(R.id.nameOfSite);
 		//TextView mun = (TextView)findViewById(R.id.nameOfMun);
 		//TextView date = (TextView)findViewById(R.id.nameOfDate);
 		
-		site.setText(siteName);
+		//site.setText(siteName);
 		//mun.setText(munName +", " +provName);
 		//date.setText(Calendar.DATE);
 	
