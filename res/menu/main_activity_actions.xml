@@ -10,6 +10,4 @@
         android:title="@string/action_search"
         android:showAsAction="ifRoom"
         />
-    
-
 </menu>
