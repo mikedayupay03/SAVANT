@@ -42,7 +42,8 @@ public class SiteAdapter extends ArrayAdapter<Site>{
 			holder = (SiteHolder)row.getTag();
 		}
 		Site site = data[position];
-		holder.aveScore.setText(site.getAveScore());
+		String score = site.getAveScore() + "";
+		holder.aveScore.setText(score.substring(0, score.indexOf(".")+2));
 		holder.siteName.setText(site.getSiteName());
 		holder.dateCreated.setText(site.getDateCreated());
 		return row;

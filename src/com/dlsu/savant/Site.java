@@ -6,14 +6,19 @@ import java.util.Calendar;
 
 public class Site implements Serializable{
 	
+	private int id;
+	
 	private String siteName;
 	private String siteMun;
 	private String siteProvince;
 	private String dateCreated;
-	private double aveScore = 0;
-	private String siteExposure;
-	private double siteSens;
-	private double siteAdaptCap;
+	private String exposureScore;
+	
+	private float sensitivityScore;
+	private float adaptiveCapacityScore;
+	
+	private boolean hasSensitivityScore;
+	private boolean hasAdaptiveCapacityScore;
 	
 	public Site(){
 		super();
@@ -23,13 +28,10 @@ public class Site implements Serializable{
 		this.siteName = siteName;
 	}
 	
-	public Site(String siteName, String siteMun, String siteProvince, String dateCreated, String siteExposure, double siteSens, double siteAdaptCap){
+	public Site(int id, String siteName, String siteMun, String siteProvince, String dateCreated){
 		this.siteName = siteName;
 		this.siteMun = siteMun;
 		this.dateCreated = dateCreated;
-		this.siteExposure = siteExposure;
-		this.siteSens = siteSens;
-		this.siteAdaptCap = siteAdaptCap;
 	}
 	
 	public void setSiteName(String siteName){
@@ -67,34 +69,48 @@ public class Site implements Serializable{
 		return date;
 	}
 	
-	public void setSiteExposure(String siteExposure){
-		this.siteExposure = siteExposure;
+	public void setExposureScore(String exposureScore){
+		this.exposureScore = exposureScore;
 	}
 	
-	public String getSiteExposure(){
-		return siteExposure;
+	public String getExposureScore(){
+		return exposureScore;
 	}
 	
-	public void setSiteSens(double siteSens){
-		this.siteSens = siteSens;
+	public void setSensitivityScore(float sensitivityScore){
+		this.sensitivityScore = sensitivityScore;
+		hasSensitivityScore = true;
 	}
 	
-	public double getSiteSens(){
-		return siteSens;
+	public float getSensitivityScore(){
+		return sensitivityScore;
 	}
 	
-	public void setSiteAdaptCap(double siteAdaptCap){
-		this.siteAdaptCap = siteAdaptCap;
+	public void setAdaptiveCapacityScore(float adaptiveCapacityScore){
+		this.adaptiveCapacityScore = adaptiveCapacityScore;
+		hasAdaptiveCapacityScore = true;
 	}
 	
-	public double getSiteAdaptCap(){
-		return siteAdaptCap;
+	public float getAdaptiveCapacityScore(){
+		return adaptiveCapacityScore;
 	}
 	
-	public String getAveScore(){
-		String ave_score;
-		aveScore = (getSiteSens() + getSiteAdaptCap()) / 2;
-		ave_score = String.valueOf(aveScore);
-		return ave_score;
+	public boolean hasSensitivityScore(){
+		return hasSensitivityScore;
+	}
+	
+	public boolean hasAdaptiveCapacityScore(){
+		return hasAdaptiveCapacityScore;
+	}
+	
+	public float getAveScore(){
+		if (hasAdaptiveCapacityScore() && hasSensitivityScore()) {
+			return (float) ((sensitivityScore + adaptiveCapacityScore) / 2.0);
+		}
+		return Integer.MIN_VALUE;
+	}
+	
+	public String toString(){
+		return getSiteName() + ", " + getSiteMun() + ", " + getSiteProvince();
 	}
 }
