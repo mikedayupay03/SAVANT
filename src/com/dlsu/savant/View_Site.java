@@ -9,41 +9,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class View_Site extends Activity {
-	
-
-	private ListView listsurvey;
-	Site site = new Site();
-	
-	String[] surveyName = {
-			"Exposure",
-			"Sensitivity",
-			"Adaptive Capacity"
-	};
-	
-	Survey survey_data[] = new Survey[]{
-			new Survey(site.getSiteExposure(), site.getSiteExposure()),
-			new Survey(Double.toString(site.getSiteSens()), Double.toString(site.getSiteSens())),
-			new Survey(Double.toString(site.getSiteAdaptCap()), Double.toString(site.getSiteAdaptCap()))
-	};
-
-	TextView nameOfSite;
-	//Initialize the list of view site
-	String[] viewSScoreOpt =  new String []
-			{ "Exposure", "Sensitivity", "Adaptive Capacity"};
-
-	private ListView listScore;
-	private ArrayAdapter<String> arrayAdapter1;
-	
+		
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_view__site);
 		
-
-		listScore = (ListView)findViewById(R.id.listScore);
-		
-		arrayAdapter1 = new ArrayAdapter<String>(this, R.layout.list_options,viewSScoreOpt);
-		listScore.setAdapter(arrayAdapter1);
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		
@@ -68,10 +39,7 @@ public class View_Site extends Activity {
 		munName.setText(siteObj.getSiteMun()+", "+ siteObj.getSiteProvince());
 		dateCreated.setText(siteObj.getDateCreated());
 		
-		listsurvey = (ListView)findViewById(R.id.listScore);
-		
-		SurveyAdapter adapter = new SurveyAdapter(this, R.layout.list_scores, surveyName, survey_data);
-		listsurvey.setAdapter(adapter);
+
 		
 		
 	}
