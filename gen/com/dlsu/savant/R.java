@@ -1229,17 +1229,17 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_search=0x7f050053;
+        public static final int action_search=0x7f050050;
         public static final int activity_chooser_view_content=0x7f050025;
-        public static final int addSite=0x7f050052;
+        public static final int addSite=0x7f05004f;
         public static final int always=0x7f05000b;
         public static final int ave_Score=0x7f050049;
-        public static final int ave_score=0x7f050050;
+        public static final int ave_score=0x7f05004d;
         public static final int averageScore=0x7f05004a;
         public static final int beginning=0x7f050011;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
-        public static final int dateCreated=0x7f050051;
+        public static final int dateCreated=0x7f05004e;
         public static final int date_created=0x7f050047;
         public static final int default_activity_button=0x7f050028;
         public static final int dialog=0x7f05000e;
@@ -1273,7 +1273,6 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f050019;
         public static final int province=0x7f050040;
         public static final int radio=0x7f05002f;
-        public static final int score_level=0x7f05004f;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1292,14 +1291,12 @@ containing a value of this type.
         public static final int split_action_bar=0x7f05001e;
         public static final int startSurvey=0x7f050042;
         public static final int submit_area=0x7f050039;
-        public static final int surveyQuestion=0x7f05004e;
         public static final int surveyScore=0x7f05004b;
         public static final int tabMode=0x7f050002;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
-        public static final int viewScore=0x7f05004d;
         public static final int withText=0x7f05000c;
     }
     public static final class integer {
@@ -1357,9 +1354,8 @@ containing a value of this type.
         public static final int activity_splash=0x7f03001a;
         public static final int activity_view__site=0x7f03001b;
         public static final int list_options=0x7f03001c;
-        public static final int list_scores=0x7f03001d;
-        public static final int list_sites=0x7f03001e;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001f;
+        public static final int list_sites=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int main_activity_actions=0x7f0c0000;
