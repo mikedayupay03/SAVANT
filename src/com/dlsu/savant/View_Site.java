@@ -9,22 +9,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class View_Site extends Activity {
-<<<<<<< HEAD
 	
 	Site site = new Site();
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_view_site_details);
-=======
-		
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_view__site);
->>>>>>> 1b7247b8c097cdac3b93c83f01f54f2d3a4c4c95
-		
+		setContentView(R.layout.activity_view_site_details);	
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		
@@ -38,13 +29,6 @@ public class View_Site extends Activity {
 		siteName.setText(siteObj.getSiteName());
 		munName.setText(siteObj.getSiteMun()+", "+ siteObj.getSiteProvince());
 		dateCreated.setText(siteObj.getDateCreated());
-<<<<<<< HEAD
-			
-=======
-		
 
-		
-		
->>>>>>> 1b7247b8c097cdac3b93c83f01f54f2d3a4c4c95
 	}
 }
