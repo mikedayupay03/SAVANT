@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:padding="10dp" >
+    
+    <TextView android:id="@+id/ave_score"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#21AD0C"
+        android:textSize="40sp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp" />
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+        
+        <TextView android:id="@+id/siteName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+        
+        <TextView android:id="@+id/dateCreated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:layout_below="@id/siteName" />
+        
+    </RelativeLayout>
+    
+
+</LinearLayout>
