@@ -956,12 +956,19 @@ containing a value of this type.
  Minimum width of the search view text entry area. 
          */
         public static final int abc_search_view_text_min_width=0x7f08000c;
-        /** 
+        /**  Default screen margins, per the Android Design guidelines. 
+
+         Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
+    
+
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
         public static final int activity_horizontal_margin=0x7f080015;
+        public static final int activity_vertical_margin=0x7f080016;
         /**  The platform's desired fixed height for a dialog along the major axis
          (the screen is in portrait). This may be either a fraction or a dimension.
  The platform's desired fixed height for a dialog along the major axis
@@ -1229,13 +1236,14 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_search=0x7f050060;
+        public static final int action_search=0x7f050061;
+        public static final int action_settings=0x7f05005f;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int adaptiveCapacityContainer=0x7f050057;
         public static final int adaptiveCapacityScore=0x7f050058;
         public static final int adaptiveCapacitySubTitle=0x7f05005a;
         public static final int adaptiveCapacityTitle=0x7f050059;
-        public static final int addSite=0x7f05005f;
+        public static final int addSite=0x7f050060;
         public static final int always=0x7f05000b;
         public static final int ave_Score=0x7f05004a;
         public static final int ave_score=0x7f05005d;
@@ -1366,15 +1374,17 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_create_site=0x7f030018;
-        public static final int activity_main=0x7f030019;
-        public static final int activity_splash=0x7f03001a;
-        public static final int activity_view_site_details=0x7f03001b;
-        public static final int list_options=0x7f03001c;
-        public static final int list_sites=0x7f03001d;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
+        public static final int activity_list_sites=0x7f030019;
+        public static final int activity_main=0x7f03001a;
+        public static final int activity_splash=0x7f03001b;
+        public static final int activity_view_site_details=0x7f03001c;
+        public static final int list_options=0x7f03001d;
+        public static final int list_sites=0x7f03001e;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001f;
     }
     public static final class menu {
-        public static final int main_activity_actions=0x7f0c0000;
+        public static final int list_sites=0x7f0c0000;
+        public static final int main_activity_actions=0x7f0c0001;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1418,6 +1428,7 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int action_search=0x7f0a0017;
+        public static final int action_settings=0x7f0a001e;
         public static final int adaptive_capacity_all_caps=0x7f0a001c;
         public static final int app_name=0x7f0a000d;
         public static final int dummy_button=0x7f0a0013;
@@ -1429,6 +1440,7 @@ containing a value of this type.
         public static final int sensitivity_all_caps=0x7f0a001a;
         public static final int siteName=0x7f0a0010;
         public static final int title_activity_create__site=0x7f0a000f;
+        public static final int title_activity_list_sites=0x7f0a001d;
         public static final int title_activity_splash=0x7f0a0016;
         public static final int title_activity_splash_screen=0x7f0a0012;
         public static final int title_activity_view__site=0x7f0a0015;

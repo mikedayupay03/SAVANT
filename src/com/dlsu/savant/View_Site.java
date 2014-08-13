@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class View_Site extends Activity {
 	
-	Site site = new Site();
+	private Site site = new Site();
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

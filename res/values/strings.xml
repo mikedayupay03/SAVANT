@@ -17,5 +17,7 @@
     <string name="sensitivity_all_caps">SENSITIVITY</string>
     <string name="exposure_all_caps">EXPOSURE</string>
     <string name="adaptive_capacity_all_caps">ADAPTIVE CAPACITY</string>
+    <string name="title_activity_list_sites">ListSitesActivity</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
