@@ -1,4 +1,4 @@
-package com.dlsu.savant;
+package objects;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;

@@ -1,5 +1,6 @@
 package com.dlsu.savant;
 
+import objects.Site;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
