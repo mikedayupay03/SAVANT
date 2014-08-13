@@ -7,11 +7,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class SavantDatabaseHandler extends SQLiteOpenHelper{
 
-	private static String DB_NAME = "savant.sqlite3";
+	private static final String DB_NAME = "savant.sqlite3";
+	private static final int DB_VERSION = 1;
+	
+	
 	private final Context myContext;
 	
 	public SavantDatabaseHandler(Context context) {
-		super(context, DB_NAME, null, 1);
+		super(context, DB_NAME, null, DB_VERSION);
 		this.myContext = context;
 	}
 
