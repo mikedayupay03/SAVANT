@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:text="SAVANT"
         android:textSize="50sp"
-        android:textColor="#F0F0F0"
+        android:textColor="#c0c0c0"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
 

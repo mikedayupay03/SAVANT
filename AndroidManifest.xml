@@ -7,45 +7,53 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/savant_home_icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        
-		<!-- Splash Screen -->
+
+        <!-- Splash Screen -->
         <activity
-            android:name="com.dlsu.savant.Splash"
+            android:name=".Splash"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
         <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
         </activity>
-        
+
         <!-- Create Site Activity -->
         <activity
             android:name=".Create_Site"
-            android:label="@string/title_activity_create__site" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.dlsu.savant.MainActivity" />
+            android:label="@string/title_activity_create__site"
+            android:screenOrientation="portrait" >
         </activity>
-        
+
         <!-- View Site Activity -->
         <activity
             android:name=".View_Site"
-            android:label="@string/title_activity_view__site" >
+            android:label="@string/title_activity_view__site"
+            android:screenOrientation="portrait" >
         </activity>
-        
+        <activity
+            android:name=".ListSitesActivity"
+            android:label="@string/title_activity_list_sites"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>
