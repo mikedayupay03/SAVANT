@@ -30,7 +30,7 @@ public class Create_Site extends ActionBarActivity {
 		
 		setTitle("Create New Site");
 		
-		intent = new Intent(Create_Site.this, View_Site.class);
+		intent = new Intent(this, View_Site.class);
 		input_site_name = (EditText)findViewById(R.id.editSiteName);
 		input_mun_name = (EditText)findViewById(R.id.editMunicipality);
 		input_prov_name = (EditText)findViewById(R.id.editProvince);
