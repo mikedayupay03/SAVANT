@@ -2,6 +2,7 @@ package com.dlsu.savant;
 
 import objects.Site;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,6 +35,12 @@ public class ListSitesActivity extends Activity {
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
+		}else if(id == R.id.addSite){
+			Intent newSite = new Intent(this, Create_Site.class);
+			startActivity(newSite);
+			return true;
+		}else if(id == R.id.action_search){
+			
 		}
 		return super.onOptionsItemSelected(item);
 	}
