@@ -1,5 +1,6 @@
 package com.dlsu.savant;
 
+import objects.ScoreIdentifier;
 import objects.Site;
 import android.app.Activity;
 import android.content.Context;
@@ -14,6 +15,8 @@ public class SiteAdapter extends ArrayAdapter<Site>{
 	Context context;
 	int layoutResourceId;
 	Site data[] = null;
+	Boolean[] siteChecked;
+	
 	
 	public SiteAdapter(Context context, int layoutResourceId, Site data[]) {
 		super(context, layoutResourceId, data);
@@ -21,6 +24,12 @@ public class SiteAdapter extends ArrayAdapter<Site>{
 		this.layoutResourceId = layoutResourceId;
 		this.context = context; 
 		this.data = data;
+		this.siteChecked = new Boolean[data.length];
+		
+		for(int i = 0; i < siteChecked.length; i++)
+		{
+			siteChecked[i] = false;	
+		}
 	}
 	
 	@Override
@@ -28,25 +37,27 @@ public class SiteAdapter extends ArrayAdapter<Site>{
 		View row = convertView; 
 		SiteHolder holder = null;
 		
-		if(row == null){
-			LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-			row = inflater.inflate(layoutResourceId, parent, false);
+		LayoutInflater inflater = ((Activity)context).getLayoutInflater();
+		row = inflater.inflate(layoutResourceId, parent, false);
 			
-			holder = new SiteHolder();
-			holder.aveScore = (TextView)row.findViewById(R.id.ave_score);
-			holder.siteName = (TextView)row.findViewById(R.id.siteName);
-			holder.dateCreated = (TextView)row.findViewById(R.id.dateCreated);
-			
-			row.setTag(holder);
-		}
-		else{
-			holder = (SiteHolder)row.getTag();
-		}
+		holder = new SiteHolder();
+		holder.aveScore = (TextView)row.findViewById(R.id.ave_score);
+		holder.siteName = (TextView)row.findViewById(R.id.siteName);
+		holder.dateCreated = (TextView)row.findViewById(R.id.dateCreated);
+		
+
 		Site site = data[position];
-		String score = site.getAveScore() + "";
-		holder.aveScore.setText(score.substring(0, score.indexOf(".")+2));
+		
 		holder.siteName.setText(site.getSiteName());
 		holder.dateCreated.setText(site.getDateCreated());
+		
+		if(site.hasAdaptiveCapacityScore() && site.hasSensitivityScore())
+		{
+			String score = site.getAveScore() + "";
+			holder.aveScore.setText(score.substring(0, score.indexOf(".")+2));
+			((TextView)row.findViewById(R.id.ave_score)).setBackgroundResource(ScoreIdentifier.identifyScoreColor(site.getAveScore()));
+		}
+		
 		return row;
 	}
 	
