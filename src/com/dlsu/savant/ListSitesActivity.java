@@ -1,5 +1,7 @@
 package com.dlsu.savant;
 
+import java.io.IOException;
+
 import objects.Site;
 import android.app.Activity;
 import android.content.Intent;
@@ -32,7 +34,12 @@ public class ListSitesActivity extends Activity implements OnItemClickListener{
 	private void initializeDatabase()
 	{
 		surveyDB = new SurveyDatabaseHandler(this);
-		surveyDB.createDatabase();
+		try {
+			surveyDB.createDatabase();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override
