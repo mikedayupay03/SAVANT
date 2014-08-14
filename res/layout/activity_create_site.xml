@@ -15,18 +15,23 @@
         android:textSize="18sp"
         android:text="@string/siteName"/>
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/editSiteName"
-        android:layout_width="wrap_content"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/siteName"
         android:layout_below="@id/siteName"
-        android:ems="12"
         android:hint="Enter site name here"
         android:paddingBottom="15sp"
-        android:textSize="15sp" >
+        android:textSize="15sp"
+        android:completionThreshold="1"
+        android:imeOptions="actionDone"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:enabled="true"
+        android:inputType="text" >
 
-    </EditText>
+    </AutoCompleteTextView>
     
     <TextView android:id="@+id/municipality"
         android:layout_width="wrap_content"
@@ -38,17 +43,22 @@
         android:textSize="18sp"
         android:text="Municipality"/>
     
-    <EditText android:id="@+id/editMunicipality"
-        android:layout_width="wrap_content"
+    <AutoCompleteTextView android:id="@+id/editMunicipality"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/siteName"
         android:layout_below="@id/municipality"
-        android:ems="12"
         android:hint="@string/hint_municipality"
         android:paddingBottom="15sp"
-        android:textSize="15sp" >
+        android:textSize="15sp"
+        android:completionThreshold="1"
+        android:imeOptions="actionDone"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:enabled="true"
+        android:inputType="text" >
         
-    </EditText>
+    </AutoCompleteTextView>
     
     <TextView android:id="@+id/province"
         android:layout_width="wrap_content"
@@ -60,17 +70,22 @@
         android:textSize="18sp"
         android:text="Province" />
     
-    <EditText android:id="@+id/editProvince"
-        android:layout_width="wrap_content"
+    <AutoCompleteTextView android:id="@+id/editProvince"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/province"
         android:layout_alignLeft="@id/siteName"
-        android:ems="12"
         android:hint="Enter province here"
         android:paddingBottom="15sp"
-        android:textSize="15sp" >
+        android:textSize="15sp"
+        android:completionThreshold="1"
+        android:imeOptions="actionDone"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:enabled="true"
+        android:inputType="text" >
         
-    </EditText>
+    </AutoCompleteTextView>
     
     <ImageButton
         android:id="@+id/startSurveybtn"

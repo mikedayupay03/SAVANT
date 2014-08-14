@@ -19,9 +19,9 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class SurveyDatabaseHandler extends SQLiteOpenHelper{
-
+	
 	private static String DB_PATH = "";
-	private static String DB_NAME = "survey.db";
+	private static String DB_NAME = "survey.sqlite3";
 	private static int DB_VERSION = 1;
 	
     private static String TABLE_SITE = "site";

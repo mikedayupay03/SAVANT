@@ -19,5 +19,6 @@
     <string name="adaptive_capacity_all_caps">ADAPTIVE CAPACITY</string>
     <string name="title_activity_list_sites">ListSitesActivity</string>
     <string name="action_settings">Settings</string>
+    <string name="site_placeholder">Site Name</string>
 
 </resources>

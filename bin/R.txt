@@ -382,14 +382,14 @@ int id action_context_bar 0x7f05001d
 int id action_menu_divider 0x7f050016
 int id action_menu_presenter 0x7f050017
 int id action_mode_close_button 0x7f050024
-int id action_search 0x7f050065
-int id action_settings 0x7f050063
+int id action_search 0x7f050066
+int id action_settings 0x7f050064
 int id activity_chooser_view_content 0x7f050025
 int id adaptiveCapacityContainer 0x7f05005b
 int id adaptiveCapacityScore 0x7f05005c
 int id adaptiveCapacitySubTitle 0x7f05005e
 int id adaptiveCapacityTitle 0x7f05005d
-int id addSite 0x7f050064
+int id addSite 0x7f050065
 int id always 0x7f05000b
 int id ave_Score 0x7f05004e
 int id ave_score 0x7f050061
@@ -464,6 +464,7 @@ int id split_action_bar 0x7f05001e
 int id startSurvey 0x7f050043
 int id startSurveybtn 0x7f050042
 int id submit_area 0x7f050039
+int id suggestion_site_text_view 0x7f050063
 int id surveyScore 0x7f050050
 int id tabMode 0x7f050002
 int id title 0x7f05002b
@@ -504,7 +505,8 @@ int layout activity_splash 0x7f03001b
 int layout activity_view_site_details 0x7f03001c
 int layout list_options 0x7f03001d
 int layout list_sites 0x7f03001e
-int layout support_simple_spinner_dropdown_item 0x7f03001f
+int layout site_suggestion 0x7f03001f
+int layout support_simple_spinner_dropdown_item 0x7f030020
 int menu list_sites 0x7f0c0000
 int menu main_activity_actions 0x7f0c0001
 int string abc_action_bar_home_description 0x7f0a0001
@@ -532,6 +534,7 @@ int string hint_municipality 0x7f0a0011
 int string not_applicable 0x7f0a0019
 int string sensitivity_all_caps 0x7f0a001a
 int string siteName 0x7f0a0010
+int string site_placeholder 0x7f0a001f
 int string title_activity_create__site 0x7f0a000f
 int string title_activity_list_sites 0x7f0a001d
 int string title_activity_splash 0x7f0a0016

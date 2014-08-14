@@ -19,7 +19,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class SavantDatabaseHandler extends SQLiteOpenHelper{
 
 	private static String DB_PATH = "";
-	private static final String DB_NAME = "savant.db";
+	private static final String DB_NAME = "savant.sqlite3";
 	private static final int DB_VERSION = 1;
 	
 	private static String TABLE_SITE_SUGGESTION = "site_suggestion";
