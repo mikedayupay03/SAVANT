@@ -113,4 +113,8 @@ public class Site implements Serializable{
 	public String toString(){
 		return getSiteName() + ", " + getSiteMun() + ", " + getSiteProvince();
 	}
+
+	public int getId() {
+		return id;
+	}
 }

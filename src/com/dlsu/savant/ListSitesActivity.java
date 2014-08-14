@@ -6,20 +6,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
 import database.SurveyDatabaseHandler;
 
-public class ListSitesActivity extends Activity {
+public class ListSitesActivity extends Activity implements OnItemClickListener{
 	
-	private SurveyDatabaseHandler surveyDBHandler;
+	private SurveyDatabaseHandler surveyDB;
 	private Site[] siteList;
-	
+	private SiteAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_list_sites);
+		
+		initializeDatabase();
+		((ListView)findViewById(R.id.listSites)).setOnItemClickListener(this);
+	}
+	
+	private void initializeDatabase()
+	{
+		surveyDB = new SurveyDatabaseHandler(this);
+		surveyDB.createDatabase();
 	}
 
 	@Override
@@ -46,4 +59,13 @@ public class ListSitesActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+		// TODO Auto-generated method stub
+		Intent nextActivity = new Intent(this, View_Site.class);
+		nextActivity.putExtra("id", ((Site)arg0.getItemAtPosition(arg2)).getId());
+		startActivity(nextActivity);
+	}
+	
 }

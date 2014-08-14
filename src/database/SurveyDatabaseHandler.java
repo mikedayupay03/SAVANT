@@ -11,12 +11,24 @@ public class SurveyDatabaseHandler extends SQLiteOpenHelper{
 	private static String DB_NAME = "survey.db";
 	private static int DB_VERSION = 1;
 	
+    private static String TABLE_SITE = "site";
+    private static String TABLE_ANSWER_SENSITIVITY = "answer_sensitivity";
+    private static String TABLE_ANSWER_ADAPTIVE_CAPACITY = "answer_adaptive_capacity";
+    private static String TABLE_ANSWER_EXPOSURE = "answer_exposure";
+	
+    private SQLiteDatabase myDB;
 	private final Context myContext;
 	
 	public SurveyDatabaseHandler(Context context) {
 		super(context, DB_NAME, null, DB_VERSION);
 		// TODO Auto-generated constructor stub
 		this.myContext = context;
+		
+	}
+	
+	public void createDatabase() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
@@ -30,5 +42,7 @@ public class SurveyDatabaseHandler extends SQLiteOpenHelper{
 		// TODO Auto-generated method stub
 		
 	}
+
+
 
 }
