@@ -4,86 +4,83 @@
     android:layout_height="match_parent"
     android:focusable="true"
     tools:context="${packageName}.${activityClass}" >
-    
-    
-    <TextView android:id="@+id/siteName"
+
+    <TextView
+        android:id="@+id/province"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="45sp"
-        android:layout_marginTop="35sp"
-        android:layout_marginBottom="10sp"
-        android:textSize="18sp"
-        android:text="@string/siteName"/>
+        android:layout_above="@+id/editProvince"
+        android:layout_alignLeft="@+id/editProvince"
+        android:layout_marginBottom="24dp"
+        android:text="Province"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editProvince"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startSurveybtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="98dp"
+        android:ems="12"
+        android:hint="Enter province here"
+        android:paddingBottom="15sp"
+        android:textSize="24sp" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editMunicipality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/province"
+        android:layout_alignLeft="@+id/province"
+        android:layout_marginBottom="39dp"
+        android:ems="12"
+        android:hint="@string/hint_municipality"
+        android:paddingBottom="15sp"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/municipality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editMunicipality"
+        android:layout_alignLeft="@+id/editMunicipality"
+        android:layout_marginBottom="31dp"
+        android:text="Municipality"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/siteName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editSiteName"
+        android:layout_alignLeft="@+id/editSiteName"
+        android:layout_marginBottom="25dp"
+        android:text="@string/siteName"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/editSiteName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/siteName"
-        android:layout_below="@id/siteName"
+        android:layout_above="@+id/municipality"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp"
         android:ems="12"
         android:hint="Enter site name here"
         android:paddingBottom="15sp"
-        android:textSize="15sp" >
+        android:textSize="25sp" />
 
-    </EditText>
-    
-    <TextView android:id="@+id/municipality"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editSiteName"
-        android:layout_alignLeft="@id/siteName"
-        android:layout_marginTop="40sp"
-        android:layout_marginBottom="10sp"
-        android:textSize="18sp"
-        android:text="Municipality"/>
-    
-    <EditText android:id="@+id/editMunicipality"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/siteName"
-        android:layout_below="@id/municipality"
-        android:ems="12"
-        android:hint="@string/hint_municipality"
-        android:paddingBottom="15sp"
-        android:textSize="15sp" >
-        
-    </EditText>
-    
-    <TextView android:id="@+id/province"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editMunicipality"
-        android:layout_alignLeft="@id/siteName"
-        android:layout_marginTop="40sp"
-        android:layout_marginBottom="10sp"
-        android:textSize="18sp"
-        android:text="Province" />
-    
-    <EditText android:id="@+id/editProvince"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/province"
-        android:layout_alignLeft="@id/siteName"
-        android:ems="12"
-        android:hint="Enter province here"
-        android:paddingBottom="15sp"
-        android:textSize="15sp" >
-        
-    </EditText>
-    
     <ImageButton
         android:id="@+id/startSurveybtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editProvince"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35sp"
-        android:src="@drawable/create_new_site_btn" >
-        
-    </ImageButton>
-    
-    
-    
+        android:layout_marginBottom="205dp"
+        android:src="@drawable/create_new_site_btn" />
 
 </RelativeLayout>
