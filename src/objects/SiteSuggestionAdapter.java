@@ -30,11 +30,11 @@ public class SiteSuggestionAdapter extends ArrayAdapter <Site> {
 		LayoutInflater inflater = ((Activity) context).getLayoutInflater();
 		row = inflater.inflate(layoutResourceId, parent, false);
 
-		TextView suggestion = (TextView) row.findViewById(R.id.suggestion_site_text_view);
+		//TextView suggestion = (TextView) row.findViewById(R.id.suggestion_site_text_view);
 		
 		Site site = getItem(position);
 		
-		suggestion.setText(site.getSiteName() + ", " + site.getSiteMun() + ", " + site.getSiteProvince());
+		//suggestion.setText(site.getSiteName() + ", " + site.getSiteMun() + ", " + site.getSiteProvince());
 		
 		return row;
 	}

@@ -1,24 +1,26 @@
 package com.dlsu.savant;
 
+import java.io.IOException;
+
 import objects.Site;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import database.SavantDatabaseHandler;
 
 public class Create_Site extends ActionBarActivity {
 	
 	public final static String EXTRA_MESSAGE = "com.dlsu.savant.MESSAGE";
 
-	// final static String EXTRA_MESSAGE = "com.dlsu.savant.MESSAGE";
-
 	private ImageButton createSitebtn;
 	private EditText input_site_name;
 	private EditText input_mun_name;
 	private EditText input_prov_name;
+	
+	SavantDatabaseHandler handler;
 	
 	Intent intent;
 	
@@ -29,6 +31,9 @@ public class Create_Site extends ActionBarActivity {
 		setContentView(R.layout.activity_create_site);
 		
 		setTitle("Create New Site");
+		
+		initDatabase();
+		
 		
 		intent = new Intent(this, View_Site.class);
 		input_site_name = (EditText)findViewById(R.id.editSiteName);
@@ -43,7 +48,6 @@ public class Create_Site extends ActionBarActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-
 
 				Site siteObject = new Site();
 
@@ -60,10 +64,20 @@ public class Create_Site extends ActionBarActivity {
 				siteObject.setSiteProvince(input_prov_name.getText().toString());
 				intent.putExtra("SiteObject", siteObject);
 				startActivityForResult(intent, 1);
-				
-
-				
+							
 			}
 		});
 	}
+	
+	private void initDatabase(){
+		handler = new SavantDatabaseHandler(this);
+		try{
+			handler.createDatabase();
+		}catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	
 }
