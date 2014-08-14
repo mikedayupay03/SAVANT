@@ -25,6 +25,7 @@ public class View_Site extends Activity implements OnClickListener{
 		setTitle(site.getSiteName() + "Details");
 		
 		initializeDatabase();
+		initializeData();
 		viewDetails();
 	}
 
@@ -99,11 +100,21 @@ public class View_Site extends Activity implements OnClickListener{
 
 	private void initializeDatabase() {
 		// TODO Auto-generated method stub
-		
+		surveyDB = new SurveyDatabaseHandler(this);
+		try {
+			surveyDB.createDatabase();
+		}
+		catch (Exception ex) {
+			
+		}
 	}
 	
 	private void initializeData(){
-		
+		surveyDB.openDataBase();
+		Bundle extras = getIntent().getExtras();
+		site = surveyDB.getSite(extras.getInt("id"));
+		surveyDB.close();
+		//((TextView)findViewById(R.id.titlebar_title)).setText(site.getSiteName()+" Details");
 	}
 
 	@Override
