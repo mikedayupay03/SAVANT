@@ -8,7 +8,7 @@
     <TextView android:id="@+id/ave_score"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#21AD0C"
+        android:background="#006334"
         android:textSize="40sp"
         android:gravity="center_vertical"
         android:padding="10dp"
