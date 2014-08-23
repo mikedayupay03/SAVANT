@@ -63,10 +63,7 @@ public class Site implements Serializable{
 	}
 	
 	public String getDateCreated(){
-		Calendar c = Calendar.getInstance();
-		SimpleDateFormat df = new SimpleDateFormat("MMMM-dd-yyyy");
-		String date = df.format(c.getTime());
-		return date;
+		return dateCreated;
 	}
 	
 	public void setExposureScore(String exposureScore){

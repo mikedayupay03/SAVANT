@@ -4,9 +4,10 @@ package com.dlsu.savant;
 import objects.ScoreIdentifier;
 import objects.Site;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View.OnClickListener;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,7 +23,7 @@ public class View_Site extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_view_site_details);	
-		setTitle(site.getSiteName() + "Details");
+		
 		
 		initializeDatabase();
 		initializeData();
@@ -114,7 +115,13 @@ public class View_Site extends Activity implements OnClickListener{
 		Bundle extras = getIntent().getExtras();
 		site = surveyDB.getSite(extras.getInt("id"));
 		surveyDB.close();
+		setTitle(site.getSiteName() + "Details");
 		//((TextView)findViewById(R.id.titlebar_title)).setText(site.getSiteName()+" Details");
+	}
+	
+	protected void onActivityResult (int requestCode, int resultCode, Intent data) {
+		initializeData();
+		viewDetails();
 	}
 
 	@Override

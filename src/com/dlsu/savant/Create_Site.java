@@ -3,6 +3,9 @@ package com.dlsu.savant;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import database.SavantDatabaseHandler;
+import database.SurveyDatabaseHandler;
+
 import objects.Site;
 import objects.SiteSuggestionAdapter;
 import android.app.AlertDialog;
@@ -18,8 +21,6 @@ import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-import database.SavantDatabaseHandler;
-import database.SurveyDatabaseHandler;
 
 public class Create_Site extends ActionBarActivity implements OnItemClickListener, OnClickListener {
 	
@@ -27,6 +28,7 @@ public class Create_Site extends ActionBarActivity implements OnItemClickListene
 
 	private ImageButton createSitebtn;	
 	SavantDatabaseHandler handler;
+	SurveyDatabaseHandler surveyHandler;
 	Intent intent;
 	
 	
@@ -40,7 +42,7 @@ public class Create_Site extends ActionBarActivity implements OnItemClickListene
 		initDatabase();
 		initData();
 		
-		createSitebtn = (ImageButton)findViewById(R.id.create_new_site_btn);
+		createSitebtn = (ImageButton)findViewById(R.id.startSurveybtn);
 		createSitebtn.setOnClickListener(this);
 		
 		/*intent = new Intent(this, View_Site.class);
@@ -164,18 +166,18 @@ public class Create_Site extends ActionBarActivity implements OnItemClickListene
 		String municipality = ((TextView)findViewById(R.id.editMunicipality)).getText().toString().trim();
 		String province = ((TextView)findViewById(R.id.editProvince)).getText().toString().trim();
 		
-		SavantDatabaseHandler savantDb = new SavantDatabaseHandler(this);
-		savantDb.openDataBase();
-		int sugg_site_id = savantDb.getSiteSuggestionId(siteName, municipality, province);
-		String[] scores = savantDb.getExposureScores(sugg_site_id);
-		savantDb.close();
-		
-		SurveyDatabaseHandler handler = new SurveyDatabaseHandler(this);
+		//SavantDatabaseHandler savantDb = new SavantDatabaseHandler(this);
 		handler.openDataBase();
-		handler.saveSite(siteName, municipality, province);
-		int id = handler.getLatestSiteId();
-		handler.saveExposureScores(id,scores);
+		int sugg_site_id = handler.getSiteSuggestionId(siteName, municipality, province);
+		String[] scores = handler.getExposureScores(sugg_site_id);
 		handler.close();
+		
+		surveyHandler = new SurveyDatabaseHandler(this);
+		surveyHandler.openDataBase();
+		surveyHandler.saveSite(siteName, municipality, province);
+		int id = surveyHandler.getLatestSiteId();
+		surveyHandler.saveExposureScores(id,scores);
+		surveyHandler.close();
 		
 		return id;
 	}

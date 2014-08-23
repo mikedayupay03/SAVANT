@@ -61,6 +61,71 @@ public class SiteAdapter extends ArrayAdapter<Site>{
 		return row;
 	}
 	
+	public void arrangeSitesByDate()
+	{
+		
+		for (int i = 0; i < data.length; i++) {
+			for (int j = 0; j < data.length-1-i; j++) {
+				if(compareDates(data[j].getDateCreated(),data[j+1].getDateCreated()))
+				{
+					switchPlaces(j,j+1);
+				}
+			}
+		}
+	}
+
+	private boolean compareDates(String dateString, String dateString2) {
+		
+		String string1 = dateString.toLowerCase();
+		String string2 = dateString2.toLowerCase();
+		
+		String[] string1Date = string1.split("-");
+		String[] string2Date = string2.split("-");
+		
+		if(Integer.parseInt(string1Date[0]) > Integer.parseInt(string2Date[0]))
+		{
+			return true;
+		}
+		else if(Integer.parseInt(string1Date[0]) < Integer.parseInt(string2Date[0]))
+		{
+			return false;
+		}
+		
+		if(Integer.parseInt(string1Date[1]) > Integer.parseInt(string2Date[1]))
+		{
+			return true;
+		}
+		else if(Integer.parseInt(string1Date[1]) < Integer.parseInt(string2Date[1]))
+		{
+			return false;
+		}
+		
+		if(Integer.parseInt(string1Date[2]) > Integer.parseInt(string2Date[2]))
+		{
+			return true;
+		}
+		else if(Integer.parseInt(string1Date[2]) < Integer.parseInt(string2Date[2]))
+		{
+			return false;
+		}
+		
+		return false;
+	}
+
+	private void switchPlaces(int i, int j) {
+		Site tempSite;
+		boolean tempBool;
+		
+		tempSite = data[j];
+		tempBool = siteChecked[j];
+		
+		data[j] = data[i];
+		siteChecked[j] = siteChecked[i];
+		
+		data[i] = tempSite;
+		siteChecked[i] = tempBool;
+	}
+	
 	static class SiteHolder
 	{
 		TextView aveScore;

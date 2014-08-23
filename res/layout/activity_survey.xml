@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_tile"
+    android:orientation="vertical" >
+    
+    
+    
+    <!-- Category -->
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_gravity="center"
+	    android:layout_weight="1"
+	    android:gravity="center" >
+
+	    <ScrollView
+	        android:id="@+id/survey_scroll_view"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        >
+	
+	        <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" >
+	
+	            <TextView
+	                android:id="@+id/category_label_text_view"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:paddingBottom="10dp"
+	                android:paddingLeft="30dp"
+	                android:paddingRight="30dp"
+	                android:paddingTop="10dp"
+	                android:text="Category Name"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="@android:color/black"
+	                android:textStyle="bold" >
+	            </TextView>
+	
+	            <ImageView
+	                android:id="@+id/category_label_divider_image_view"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:layout_below="@+id/category_label_text_view"
+	                android:paddingTop="0dp"
+	                android:src="@drawable/divider" >
+	            </ImageView>
+	
+	            <!-- Main Question -->
+	
+	            <TextView
+	                android:id="@+id/main_question_text_view"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/category_label_divider_image_view"
+	                android:gravity="center"
+	                android:paddingBottom="15dp"
+	                android:paddingLeft="30dp"
+	                android:paddingRight="30dp"
+	                android:paddingTop="15dp"
+	                android:text="Main Question"
+	                android:textAppearance="?android:attr/textAppearanceSmall"
+	                android:textColor="@android:color/black"
+	                android:textStyle="normal|bold" >
+	            </TextView>
+	
+	            <ImageView
+	                android:id="@+id/main_question_divider_image_view"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:layout_below="@+id/main_question_text_view"
+	                android:paddingTop="0dp"
+	                android:src="@drawable/divider" >
+	            </ImageView>
+	
+	            <!-- Subquestion -->
+			
+	
+	            <TextView
+	                android:id="@+id/sub_question_text_view"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:minHeight="100dp"
+	                android:layout_below="@+id/main_question_divider_image_view"
+	                android:gravity="center"
+	                android:paddingBottom="15dp"
+	                android:paddingLeft="30dp"
+	                android:paddingRight="30dp"
+	                android:paddingTop="15dp"
+	                android:text="Sub Question"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+	                android:textColor="@android:color/black"
+	                android:textStyle="normal|bold" >
+	            </TextView>
+	            
+	            
+	            <!-- Seek Bar -->
+	
+				<ImageView
+				    android:id="@+id/survey_frequency_slider_label_image_view"
+				    android:layout_width="wrap_content"
+				    android:layout_below="@+id/sub_question_text_view"
+				    android:layout_centerHorizontal="true"
+				    android:src="@drawable/labelbottom"
+				    android:layout_gravity="center_horizontal"
+				    android:layout_height="wrap_content" >
+				</ImageView>
+	
+	            <SeekBar
+	                android:id="@+id/survey_frequency_slider"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="22dp"
+	                android:layout_marginRight="22dp"
+	                android:layout_alignLeft="@id/survey_frequency_slider_label_image_view"
+	                android:layout_alignRight="@id/survey_frequency_slider_label_image_view"
+	                android:layout_below="@+id/survey_frequency_slider_label_image_view"
+	                android:max= "4"
+	                android:progress="0"
+	                android:progressDrawable="@drawable/seek_bar_progress"
+	                android:secondaryProgress="0"
+	                android:thumb="@drawable/seek_bar_thumb_normal" >
+	            </SeekBar>
+	
+	
+	
+	            <!-- Answer Information -->
+	
+	            <TextView
+	                android:id="@+id/answer_information_text_view"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/survey_frequency_slider"
+	                android:gravity="center"
+	                android:paddingBottom="15dp"
+	                android:paddingLeft="30dp"
+	                android:paddingRight="30dp"
+	                android:paddingTop="15dp"
+	                android:text="Answer Info"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+	                android:textColor="@android:color/black"
+	                android:textStyle="normal|bold" >
+	            </TextView>
+	
+	            <!-- Instruction -->
+	
+	            <TextView
+	                android:id="@+id/survey_instruction_text_view"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/answer_information_text_view"
+	                android:gravity="center"
+	                android:paddingBottom="15dp"
+	                android:paddingLeft="30dp"
+	                android:paddingRight="30dp"
+	                android:paddingTop="15dp"
+	                android:text="Choose from the scale.\nTap next when you\'re done."
+	                android:textAppearance="?android:attr/textAppearanceSmall"
+	                android:textColor="@android:color/black"
+	                android:textStyle="normal|bold" >
+	            </TextView>
+	            
+	            <ImageView 
+	                android:id="@+id/surevy_item_picture_border"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:paddingBottom="40dp" 
+	                android:layout_alignBottom="@id/survey_frequency_slider_label_image_view"
+	            />
+	            
+	            <ImageView
+	                android:id="@+id/survey_item_image_view"
+	                android:layout_width="210dp"
+	                android:layout_height="230dp"
+	                android:scaleType="fitXY"
+	                android:layout_centerHorizontal="true"
+	                android:paddingBottom="71dp" 
+	                android:src="@drawable/sens_1_high"
+	                android:layout_alignBottom="@id/survey_frequency_slider_label_image_view"
+	                >
+	            </ImageView>
+	            
+	        </RelativeLayout>
+	    </ScrollView>
+	</RelativeLayout>
+    <!-- Buttons -->
+
+	<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" 
+	        android:background="@drawable/header_bg_tile"
+	        >
+	        
+	    <LinearLayout
+	        android:id="@+id/survey_prev_layout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_weight="1" 
+	        android:clickable="true"
+	        android:onClick="goPrevious"
+	        >
+	
+	        <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/white_prev"
+	            />
+	
+	         <TextView
+	             android:id="@+id/survey_previous_button"
+	             android:layout_width="0dp"
+	             android:layout_height="wrap_content"
+	             android:background="@drawable/header_bg_tile"
+	             android:text="Previous"
+	             android:textAppearance="?android:attr/textAppearanceMedium"
+	             android:textColor="@android:color/white" 
+	             android:layout_weight="1"
+	             android:layout_gravity="center"
+	             android:gravity="center"
+	             />
+	
+		</LinearLayout>
+	         
+	    <LinearLayout
+	        android:id="@+id/survey_next_layout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_weight="1"
+	        android:clickable="true" 
+	        android:onClick="goNext"
+	        >
+	            
+	        <TextView
+	            android:id="@+id/survey_next_button"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/header_bg_tile"
+	            android:text="Next"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textColor="@android:color/white" 
+	            android:layout_weight="1"
+	            android:layout_gravity="center"
+	            android:gravity="center"
+	            />
+	        
+	        <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/white_next" />
+	
+	    </LinearLayout>
+	 </LinearLayout>
+</LinearLayout>

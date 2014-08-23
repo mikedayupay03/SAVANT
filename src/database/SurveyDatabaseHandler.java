@@ -11,6 +11,7 @@ import java.util.Calendar;
 import objects.Site;
 import objects.SurveyItem;
 import objects.SurveyType;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -36,7 +37,7 @@ public class SurveyDatabaseHandler extends SQLiteOpenHelper{
 		super(context, DB_NAME, null, DB_VERSION);
 		// TODO Auto-generated constructor stutb
 		this.myContext = context;
-		DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
+		DB_PATH = "/data/data/" + context.getApplicationContext().getPackageName() + "/databases/";
 		
 		boolean dbexist = checkDatabase();
 		
@@ -78,7 +79,7 @@ public class SurveyDatabaseHandler extends SQLiteOpenHelper{
     		
     	} else {
         	this.getReadableDatabase();
- 
+        	this.close();
         	try {
     			copyDataBase();
     		} catch (IOException e) {

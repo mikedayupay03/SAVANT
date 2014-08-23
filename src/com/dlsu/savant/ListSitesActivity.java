@@ -1,6 +1,7 @@
 package com.dlsu.savant;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import objects.Site;
 import android.app.Activity;
@@ -28,7 +29,9 @@ public class ListSitesActivity extends Activity implements OnItemClickListener{
 		setContentView(R.layout.activity_list_sites);
 		
 		initializeDatabase();
+		initializeData();
 		((ListView)findViewById(R.id.listSites)).setOnItemClickListener(this);
+		reloadList();
 	}
 	
 	private void initializeDatabase()
@@ -73,6 +76,25 @@ public class ListSitesActivity extends Activity implements OnItemClickListener{
 		Intent nextActivity = new Intent(this, View_Site.class);
 		nextActivity.putExtra("id", ((Site)arg0.getItemAtPosition(arg2)).getId());
 		startActivity(nextActivity);
+	}
+	
+	private void initializeData() {
+		surveyDB.openDataBase();
+		ArrayList <Site> sites = surveyDB.getAllSites();
+		siteList = new Site[sites.size()];
+		for (int i = 0; i < sites.size(); i++) {
+			siteList[i] = sites.get(i);
+		}
+		surveyDB.close();
+	}
+	
+	private void reloadList() {
+		setTitle("All Sites");
+		
+		adapter = new SiteAdapter(this, R.layout.list_sites, siteList);
+		adapter.arrangeSitesByDate();
+		//optionsButton.getListByDateAddedItem().setChecked(true);
+		((ListView)findViewById(R.id.listSites)).setAdapter(adapter);
 	}
 	
 }
