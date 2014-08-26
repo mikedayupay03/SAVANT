@@ -37,19 +37,19 @@ public class SurveyAnswersActivity extends Activity {
 		
 		if (type.equals("sensitivity")) {
 			this.type = SurveyType.SURVEY_TYPE_SENSITIVITY;
-			//((TextView)findViewById(R.id.titlebar_title)).setText("Sensitivity Survey");
-			setTitle("Sensitivity Survey");
+			((TextView)findViewById(R.id.titlebar_title)).setText("Sensitivity Survey");
+			//setTitle("Sensitivity Survey");
 		}
 		else if(type.equals("adaptive")) {
 			this.type = SurveyType.SURVEY_TYPE_ADAPTIVE_CAPACITY;
-			//((TextView)findViewById(R.id.titlebar_title)).setText("Adaptive Capacity Survey");
-			setTitle("Adaptive Capacity Survey");
+			((TextView)findViewById(R.id.titlebar_title)).setText("Adaptive Capacity Survey");
+			//setTitle("Adaptive Capacity Survey");
 		}
 		else
 		{
 			this.type = SurveyType.SURVEY_TYPE_EXPOSURE;
-			//((TextView)findViewById(R.id.titlebar_title)).setText("Exposure Survey");
-			setTitle("Exposure Survey");
+			((TextView)findViewById(R.id.titlebar_title)).setText("Exposure Survey");
+			//setTitle("Exposure Survey");
 		}
 		
 		initializeDatabase();

@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import database.SurveyDatabaseHandler;
@@ -27,11 +28,11 @@ public class ListSitesActivity extends Activity implements OnItemClickListener{
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_list_sites);
-		
+		((TextView)findViewById(R.id.titlebar_title)).setText("All Sites");
 		initializeDatabase();
 		initializeData();
 		((ListView)findViewById(R.id.listSites)).setOnItemClickListener(this);
-		reloadList();
+		viewList();
 	}
 	
 	private void initializeDatabase()
@@ -88,8 +89,7 @@ public class ListSitesActivity extends Activity implements OnItemClickListener{
 		surveyDB.close();
 	}
 	
-	private void reloadList() {
-		setTitle("All Sites");
+	private void viewList() {
 		
 		adapter = new SiteAdapter(this, R.layout.list_sites, siteList);
 		adapter.arrangeSitesByDate();

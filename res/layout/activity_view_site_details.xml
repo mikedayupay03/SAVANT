@@ -5,6 +5,11 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
     tools:context="${packageName}.${activityClass}" >
+    
+    <objects.TitleBar
+        android:id="@+id/titlebar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" />
 
     <TextView android:id="@+id/siteName"
         android:layout_width="wrap_content"
@@ -14,7 +19,8 @@
         android:layout_marginTop="10dp"
         android:text="@string/siteName"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_below="@id/titlebar" />
 
     <TextView android:id="@+id/nameOfSite"
         android:layout_width="wrap_content"
@@ -68,22 +74,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:background="#006334"
+        android:layout_below="@id/titlebar"
+        android:background="@drawable/ave_scr_bg_color_na_tile"
         android:paddingBottom="35sp"
         android:paddingLeft="25sp"
         android:paddingRight="25sp"
         android:paddingTop="25sp"
-        android:text="N/A"
-        android:textSize="30sp"
+        android:text="@string/not_applicable"
+        android:textSize="40sp"
         android:textColor="#000000" />
 
     <TextView
         android:id="@+id/averageScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/Municipality"
-        android:layout_marginRight="11sp"
+        android:layout_alignBottom="@id/Municipality"
+        android:layout_marginRight="15dp"
         android:layout_alignParentRight="true"
         android:text="Average Score"
         android:textSize="12sp" />
@@ -94,8 +100,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/nameOfDate"
-        android:layout_marginTop="8sp"
+        android:layout_below="@id/nameOfDate"
+        android:layout_marginTop="15dp"
         android:background="#006334"
         android:fitsSystemWindows="true"
         android:paddingBottom="5sp"
@@ -116,12 +122,8 @@
             android:padding="8dp" >
             
             <TextView android:id="@+id/exposureScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="6dp"
-                android:paddingRight="6dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:gravity="center"
                 android:text="@string/not_applicable"
                 android:background="@drawable/ave_scr_bg_color_na_tile"
@@ -135,16 +137,21 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:layout_toRightOf="@id/exposureScore"
-                android:padding="3dp" />
+                android:paddingLeft="3dp" />
             
             <TextView android:id="@+id/exposureSubTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:text="@string/undefined"
-                android:padding="3dp"
                 android:layout_below="@id/exposureTitle"
-                android:layout_toRightOf="@id/exposureScore" />
+                android:layout_toRightOf="@id/exposureScore"
+                android:paddingLeft="3dp" />
+            
+            <ImageView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/next"
+                android:layout_alignParentRight="true" />
             
         </RelativeLayout>
         
@@ -159,12 +166,8 @@
             android:padding="8dp" >
             
             <TextView android:id="@+id/sensitivityScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="6dp"
-                android:paddingRight="6dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:gravity="center"
                 android:text="@string/not_applicable"
                 android:background="@drawable/ave_scr_bg_color_na_tile"
@@ -178,7 +181,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:layout_toRightOf="@id/sensitivityScore"
-                android:padding="3dp" />
+                android:paddingLeft="3dp" />
             
             <TextView android:id="@+id/sensitivitySubTitle"
                 android:layout_width="match_parent"
@@ -187,7 +190,13 @@
                 android:text="@string/undefined"
                 android:layout_below="@id/sensitivityTitle"
                 android:layout_toRightOf="@id/sensitivityScore"
-                android:padding="3dp" />
+                android:paddingLeft="3dp" />
+            
+            <ImageView android:id="@+id/site_details_sensitivity_survey_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/answer"
+                android:layout_alignParentRight="true" />
             
         </RelativeLayout>
         
@@ -202,12 +211,8 @@
             android:padding="8dp" >
             
             <TextView android:id="@+id/adaptiveCapacityScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="6dp"
-                android:paddingRight="6dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:gravity="center"
                 android:text="@string/not_applicable"
                 android:background="@drawable/ave_scr_bg_color_na_tile"
@@ -221,7 +226,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:layout_toRightOf="@id/adaptiveCapacityScore"
-                android:padding="3dp" />
+                android:paddingLeft="3dp" />
             
             <TextView android:id="@+id/adaptiveCapacitySubTitle"
                 android:layout_width="match_parent"
@@ -230,7 +235,13 @@
                 android:text="Undefined"
                 android:layout_below="@id/adaptiveCapacityTitle"
                 android:layout_toRightOf="@id/adaptiveCapacityScore"
-                android:padding="3dp" />
+                android:paddingLeft="3dp" />
+            
+            <ImageView android:id="@+id/site_details_adaptive_capacity_survey_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/answer"
+                android:layout_alignParentRight="true" />
             
         </RelativeLayout>
         
