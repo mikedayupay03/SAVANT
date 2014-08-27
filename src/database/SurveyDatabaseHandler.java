@@ -35,9 +35,9 @@ public class SurveyDatabaseHandler extends SQLiteOpenHelper{
 	
 	public SurveyDatabaseHandler(Context context) {
 		super(context, DB_NAME, null, DB_VERSION);
-		// TODO Auto-generated constructor stutb
+		// TODO Auto-generated constructor stub
 		this.myContext = context;
-		DB_PATH = "/data/data/" + context.getApplicationContext().getPackageName() + "/databases/";
+		DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
 		
 		boolean dbexist = checkDatabase();
 		
@@ -79,7 +79,6 @@ public class SurveyDatabaseHandler extends SQLiteOpenHelper{
     		
     	} else {
         	this.getReadableDatabase();
-        	this.close();
         	try {
     			copyDataBase();
     		} catch (IOException e) {

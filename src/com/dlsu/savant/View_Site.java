@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import database.SurveyDatabaseHandler;
@@ -31,21 +32,24 @@ public class View_Site extends Activity implements OnClickListener{
 	}
 
 	private void viewDetails() {
+		((TextView)findViewById(R.id.titlebar_title)).setText(site.getSiteName()+" Details");
 		((TextView)findViewById(R.id.nameOfSite)).setText(site.getSiteName());
 		((TextView)findViewById(R.id.nameOfMun)).setText(site.getSiteMun() + ", " + site.getSiteProvince());
 		((TextView)findViewById(R.id.nameOfDate)).setText(site.getDateCreated());
 		
-		((TextView)findViewById(R.id.exposureSubTitle)).setText(site.getExposureScore());
-		((TextView)findViewById(R.id.exposureSubTitle)).setBackgroundResource(ScoreIdentifier.identifyScoreColor(site.getExposureScore()));
-		((TextView)findViewById(R.id.exposureScore)).setText(ScoreIdentifier.identifyScoreCategory(site.getExposureScore()));
+		((TextView)findViewById(R.id.exposureScore)).setText(site.getExposureScore());
+		((TextView)findViewById(R.id.exposureScore)).setBackgroundResource(ScoreIdentifier.identifyScoreColor(site.getExposureScore()));
+		((TextView)findViewById(R.id.exposureSubTitle)).setText(ScoreIdentifier.identifyScoreCategory(site.getExposureScore()));
 		
 		((RelativeLayout)findViewById(R.id.exposureContainer)).setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				
-				
+				Intent intent = new Intent(View_Site.this, SurveyAnswersActivity.class);
+				intent.putExtra("id", site.getId());
+				intent.putExtra("type", "exposure");
+				startActivity(intent);
 			}
 		});
 		
@@ -57,14 +61,17 @@ public class View_Site extends Activity implements OnClickListener{
 		
 		if(site.hasSensitivityScore()){
 			String score = site.getSensitivityScore()+"";
-			((TextView)findViewById(R.id.sensitivitySubTitle)).setText(score.substring(0, score.indexOf(".") + 2));
+			((TextView)findViewById(R.id.sensitivityScore)).setText(score.substring(0, score.indexOf(".") + 2));
 			((TextView)findViewById(R.id.sensitivityScore)).setBackgroundResource(ScoreIdentifier.identifyScoreColor(site.getSensitivityScore()));
-			((TextView)findViewById(R.id.sensitivityScore)).setText(ScoreIdentifier.identifyScoreCategory(site.getSensitivityScore()));
-			//((ImageView)findViewById(R.id.site_details_sensitivity_survey_button)).setImageResource(R.drawable.next);
+			((TextView)findViewById(R.id.sensitivitySubTitle)).setText(ScoreIdentifier.identifyScoreCategory(site.getSensitivityScore()));
+			((ImageView)findViewById(R.id.site_details_sensitivity_survey_button)).setImageResource(R.drawable.next);
 			((RelativeLayout)findViewById(R.id.sensitivityContainer)).setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					
+					Intent intent = new Intent(View_Site.this, SurveyAnswersActivity.class);
+					intent.putExtra("id", site.getId());
+					intent.putExtra("type", "sensitivity");
+					startActivity(intent);
 				}
 			});
 		}else
@@ -72,28 +79,37 @@ public class View_Site extends Activity implements OnClickListener{
 			((RelativeLayout)findViewById(R.id.sensitivityContainer)).setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					
+					Intent intent = new Intent(View_Site.this, SurveyActivity.class);
+					intent.putExtra("id", site.getId());
+					intent.putExtra("type", "sensitivity");
+					startActivityForResult(intent, 1);
 				}
 			});
 		}
 		
 		if (site.hasAdaptiveCapacityScore()) {
 			String score = site.getAdaptiveCapacityScore()+"";
-			((TextView)findViewById(R.id.adaptiveCapacitySubTitle)).setText(score.substring(0, score.indexOf(".")+2));
+			((TextView)findViewById(R.id.adaptiveCapacityScore)).setText(score.substring(0, score.indexOf(".")+2));
 			((TextView)findViewById(R.id.adaptiveCapacityScore)).setBackgroundResource(ScoreIdentifier.identifyScoreColor(site.getAdaptiveCapacityScore()));
-			((TextView)findViewById(R.id.adaptiveCapacityScore)).setText(ScoreIdentifier.identifyScoreCategory(site.getAdaptiveCapacityScore()));
-			//((ImageView)findViewById(R.id.site_details_adaptive_capacity_survey_button)).setImageResource(R.drawable.next);
+			((TextView)findViewById(R.id.adaptiveCapacitySubTitle)).setText(ScoreIdentifier.identifyScoreCategory(site.getAdaptiveCapacityScore()));
+			((ImageView)findViewById(R.id.site_details_adaptive_capacity_survey_button)).setImageResource(R.drawable.next);
 			((RelativeLayout)findViewById(R.id.adaptiveCapacityContainer)).setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					
+					Intent intent = new Intent(View_Site.this, SurveyAnswersActivity.class);
+					intent.putExtra("id", site.getId());
+					intent.putExtra("type", "adaptive");
+					startActivity(intent);
 				}
 			});
 		}else {
 			((RelativeLayout)findViewById(R.id.adaptiveCapacityContainer)).setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					
+					Intent intent = new Intent(View_Site.this, SurveyActivity.class);
+					intent.putExtra("id", site.getId());
+					intent.putExtra("type", "adaptive");
+					startActivityForResult(intent, 1);
 				}
 			});
 		}

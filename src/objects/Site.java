@@ -20,17 +20,13 @@ public class Site implements Serializable{
 	private boolean hasSensitivityScore;
 	private boolean hasAdaptiveCapacityScore;
 	
-	public Site(){
-		super();
-	}
 	
-	public Site(String siteName){
-		this.siteName = siteName;
-	}
 	
 	public Site(int id, String siteName, String siteMun, String siteProvince, String dateCreated){
+		this.id = id;
 		this.siteName = siteName;
 		this.siteMun = siteMun;
+		this.siteProvince = siteProvince;
 		this.dateCreated = dateCreated;
 	}
 	

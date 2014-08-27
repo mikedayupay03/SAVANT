@@ -23,18 +23,6 @@ public class SavantDatabaseHandler extends SQLiteOpenHelper{
 	private static final String DB_NAME = "savant.sqlite3";
 	private static final int DB_VERSION = 1;
 	
-	/*private static final String TABLE_CREATE_SITE_SUGGESTION = "CREATE TABLE site_suggestion(_id INTEGER PRIMARY KEY, " +
-			"name text, municipality text, province text)";
-	private static final String TABLE_CREATE_SITE_EXPOSURE_SCORE = "CREATE TABLE site_exposure_score(_id INTEGER PRIMARY KEY, " +
-			"site_suggestion_id NUMERIC, wave_exposure NUMERIC, sea_surface_temp NUMERIC, rainfall_NUMERIC)";
-	private static final String TABLE_CREATE_SURVEY_ITEM_ADAPTIVE_CAPACITY = "CREATE TABLE survey_item_adaptive_capacity(_id INTEGER PRIMARY KEY, " +
-			"image_5 TEXT, image_4 TEXT, image_3 TEXT, image_2 TEXT, value_5_desc TEXT, value_4_desc TEXT, value_3_desc TEXT, value_2_desc TEXT, " +
-			"sub_question TEXT, main_question TEXT, category_name TEXT)";
-	private static final String TABLE_CREATE_SURVEY_ITEM_EXPOSURE = "CREATE TABLE survey_item_exposure(_id INTEGER PRIMARY KEY, question TEXT)";
-	private static final String TABLE_CREATE_SURVEY_ITEM_SENSITIVITY = "CREATE TABLE survey_item_sensitivity(_id INTEGER PRIMARY KEY, " +
-			"image_5 TEXT, image_4 TEXT, image_3 TEXT, image_2 TEXT, image_1 TEXT, value_5_desc TEXT, value_4_desc TEXT, value_3_desc TEXT, " +
-			"value_2_desc TEXT, value_1_desc TEXT, category_name TEXT, main_question TEXT, sub_question TEXT)";*/
-	
 	private static String TABLE_SITE_SUGGESTION = "site_suggestion";
 	private static String TABLE_SURVEY_ITEM_SENSITIVITY = "survey_item_sensitivity";
 	private static String TABLE_SURVEY_ITEM_ADAPTIVE_CAPACITY = "survey_item_adaptive_capacity";
@@ -47,7 +35,25 @@ public class SavantDatabaseHandler extends SQLiteOpenHelper{
 	public SavantDatabaseHandler(Context context) {
 		super(context, DB_NAME, null, DB_VERSION);
 		this.myContext = context;
-		DB_PATH = "/data/data/" + context.getApplicationContext().getPackageName() + "/databases/";
+		DB_PATH = context.getApplicationInfo().dataDir + "/" + "databases/";
+	}
+	
+	public void createDatabase() throws IOException
+	{
+		boolean dbExist = checkDatabase();
+		if(dbExist){
+			this.getWritableDatabase();
+			this.close();
+			
+		}else {
+			this.getReadableDatabase();
+			try{
+				copyDatabase();
+			}catch(IOException e)
+			{
+				throw new Error("Error copying database");
+			}
+		}
 	}
 	
 	private boolean checkDatabase()
@@ -87,24 +93,6 @@ public class SavantDatabaseHandler extends SQLiteOpenHelper{
     	myInput.close();
 	}
 	
-	public void createDatabase() throws IOException
-	{
-		boolean dbExist = checkDatabase();
-		if(dbExist){
-			this.getWritableDatabase();
-			this.close();
-			
-		}else {
-			this.getReadableDatabase();
-			this.close();
-			try{
-				copyDatabase();
-			}catch(IOException e)
-			{
-				throw new Error("Error copying database");
-			}
-		}
-	}
 	
 	public void openDataBase() throws SQLException {
     	String myPath = DB_PATH + DB_NAME;

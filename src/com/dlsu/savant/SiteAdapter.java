@@ -41,7 +41,7 @@ public class SiteAdapter extends ArrayAdapter<Site>{
 		row = inflater.inflate(layoutResourceId, parent, false);
 			
 		holder = new SiteHolder();
-		holder.aveScore = (TextView)row.findViewById(R.id.ave_score);
+		holder.aveScore = (TextView)row.findViewById(R.id.ave_score_label);
 		holder.siteName = (TextView)row.findViewById(R.id.siteName);
 		holder.dateCreated = (TextView)row.findViewById(R.id.dateCreated);
 		
@@ -55,7 +55,7 @@ public class SiteAdapter extends ArrayAdapter<Site>{
 		{
 			String score = site.getAveScore() + "";
 			holder.aveScore.setText(score.substring(0, score.indexOf(".")+2));
-			((TextView)row.findViewById(R.id.ave_score)).setBackgroundResource(ScoreIdentifier.identifyScoreColor(site.getAveScore()));
+			((TextView)row.findViewById(R.id.ave_score_label)).setBackgroundResource(ScoreIdentifier.identifyScoreColor(site.getAveScore()));
 		}
 		
 		return row;
