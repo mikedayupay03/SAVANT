@@ -1,4 +1,3 @@
 /android
 /com
-/database
-/objects
+/.gitignore
