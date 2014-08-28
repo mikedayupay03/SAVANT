@@ -5,6 +5,10 @@
     android:focusable="true"
     tools:context="${packageName}.${activityClass}" >
     
+    <objects.TitleBar
+        android:id="@+id/titlebar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" />
     
     <TextView android:id="@+id/siteName"
         android:layout_width="wrap_content"
@@ -13,7 +17,8 @@
         android:layout_marginTop="35sp"
         android:layout_marginBottom="10sp"
         android:textSize="18sp"
-        android:text="@string/siteName"/>
+        android:text="@string/siteName"
+        android:layout_below="@id/titlebar"/>
 
     <AutoCompleteTextView
         android:id="@+id/editSiteName"
@@ -87,16 +92,22 @@
         
     </AutoCompleteTextView>
     
-    <ImageButton
+    <Button
         android:id="@+id/startSurveybtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editProvince"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35sp"
-        android:src="@drawable/create_new_site_btn" >
+        android:background="#000000"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="CREATE A NEW SITE"
+        android:textColor="#f0f0f0"
+        android:textSize="15sp"
+        android:typeface="sans" >
         
-    </ImageButton>
+    </Button>
     
     
     

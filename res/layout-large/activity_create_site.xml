@@ -5,25 +5,30 @@
     android:focusable="true"
     tools:context="${packageName}.${activityClass}" >
     
+    <objects.TitleBar
+        android:id="@+id/titlebar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" />
     
     <TextView android:id="@+id/siteName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="45sp"
-        android:layout_marginTop="35sp"
-        android:layout_marginBottom="10sp"
-        android:textSize="18sp"
-        android:text="@string/siteName"/>
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignLeft="@id/editSiteName"
+        android:textSize="30sp"
+        android:text="@string/siteName"
+        android:layout_below="@id/titlebar"/>
 
     <AutoCompleteTextView
         android:id="@+id/editSiteName"
-        android:layout_width="220dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/siteName"
+        android:layout_centerHorizontal="true"
         android:layout_below="@id/siteName"
         android:hint="Enter site name here"
         android:paddingBottom="15sp"
-        android:textSize="15sp"
+        android:textSize="25sp"
         android:completionThreshold="1"
         android:imeOptions="actionDone"
         android:maxLength="20"
@@ -37,20 +42,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editSiteName"
-        android:layout_alignLeft="@id/siteName"
-        android:layout_marginTop="40sp"
+        android:layout_alignLeft="@id/editMunicipality"
+        android:layout_marginTop="70sp"
         android:layout_marginBottom="10sp"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:text="Municipality"/>
     
     <AutoCompleteTextView android:id="@+id/editMunicipality"
-        android:layout_width="220dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/siteName"
+        android:layout_centerHorizontal="true"
         android:layout_below="@id/municipality"
         android:hint="@string/hint_municipality"
         android:paddingBottom="15sp"
-        android:textSize="15sp"
+        android:textSize="25sp"
         android:completionThreshold="1"
         android:imeOptions="actionDone"
         android:maxLength="20"
@@ -64,20 +69,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editMunicipality"
-        android:layout_alignLeft="@id/siteName"
-        android:layout_marginTop="40sp"
+        android:layout_alignLeft="@id/editProvince"
+        android:layout_marginTop="70sp"
         android:layout_marginBottom="10sp"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:text="Province" />
     
     <AutoCompleteTextView android:id="@+id/editProvince"
-        android:layout_width="220dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/province"
-        android:layout_alignLeft="@id/siteName"
+        android:layout_centerHorizontal="true"
         android:hint="Enter province here"
         android:paddingBottom="15sp"
-        android:textSize="15sp"
+        android:textSize="25sp"
         android:completionThreshold="1"
         android:imeOptions="actionDone"
         android:maxLength="20"
@@ -87,16 +92,22 @@
         
     </AutoCompleteTextView>
     
-    <ImageButton
+    <Button
         android:id="@+id/startSurveybtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editProvince"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35sp"
-        android:src="@drawable/create_new_site_btn" >
+        android:layout_marginTop="70sp"
+        android:background="#000000"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:text="CREATE A NEW SITE"
+        android:textColor="#f0f0f0"
+        android:textSize="25sp"
+        android:typeface="sans" >
         
-    </ImageButton>
+    </Button>
     
     
     

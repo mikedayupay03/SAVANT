@@ -48,13 +48,13 @@ public class SurveyActivity extends Activity implements OnSeekBarChangeListener,
 		Bundle extras = getIntent().getExtras();
 		if (extras.getString("type").equals("sensitivity")) {
 			type = SurveyType.SURVEY_TYPE_SENSITIVITY;
-			//((TextView)findViewById(R.id.titlebar_title)).setText("Sensitivity Survey");
-			setTitle("Sensitivity Survey");
+			((TextView)findViewById(R.id.titlebar_title)).setText("Sensitivity Survey");
+			//setTitle("Sensitivity Survey");
 		}
 		else {
 			type = SurveyType.SURVEY_TYPE_ADAPTIVE_CAPACITY;
-			//((TextView)findViewById(R.id.titlebar_title)).setText("Adaptive Capacity Survey");
-			setTitle("Adaptive Capacity Survey");
+			((TextView)findViewById(R.id.titlebar_title)).setText("Adaptive Capacity Survey");
+			//setTitle("Adaptive Capacity Survey");
 			((ImageView)findViewById(R.id.survey_frequency_slider_label_image_view)).setImageResource(R.drawable.label_bottom_adpt_cpcty);
 		}
 		siteId = extras.getInt("id");

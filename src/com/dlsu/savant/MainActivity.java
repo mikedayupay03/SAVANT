@@ -6,12 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends Activity {
 	
-	private ImageButton viewSiteBtn;
-	private ImageButton createSiteBtn;
+	private Button viewSiteBtn;
+	private Button createSiteBtn;
 	
 	
     @Override
@@ -20,10 +21,9 @@ public class MainActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         
-        setTitle("SAVANT");
         
-        viewSiteBtn = (ImageButton)findViewById(R.id.view_site_btn);
-        createSiteBtn = (ImageButton)findViewById(R.id.create_new_site_btn);
+        viewSiteBtn = (Button)findViewById(R.id.view_site_btn);
+        createSiteBtn = (Button)findViewById(R.id.create_new_site_btn);
         
         viewSiteBtn.setOnClickListener(new View.OnClickListener() {
 			
