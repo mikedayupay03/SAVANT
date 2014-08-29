@@ -6,7 +6,7 @@
     android:fitsSystemWindows="false"
     tools:context="${packageName}.${activityClass}" >
     
-  	<objects.TitleBar
+   <objects.TitleBar
         android:id="@+id/titlebar"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content" />
@@ -257,7 +257,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="40dp"
             android:layout_gravity="center_horizontal"
             android:background="#000000" />
         

@@ -20,8 +20,7 @@
 	    <ScrollView
 	        android:id="@+id/survey_scroll_view"
 	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        >
+	        android:layout_height="wrap_content" >
 	
 	        <RelativeLayout
 	            android:layout_width="match_parent"
@@ -65,7 +64,7 @@
 	                android:paddingRight="30dp"
 	                android:paddingTop="15dp"
 	                android:text="Main Question"
-	                android:textAppearance="?android:attr/textAppearanceSmall"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
 	                android:textColor="@android:color/black"
 	                android:textStyle="normal|bold" >
 	            </TextView>
@@ -77,7 +76,8 @@
 	                android:layout_centerHorizontal="true"
 	                android:layout_below="@+id/main_question_text_view"
 	                android:paddingTop="0dp"
-	                android:src="@drawable/divider" >
+	                android:src="@drawable/divider"
+	                android:layout_marginBottom="30dp" >
 	            </ImageView>
 	
 	            <!-- Subquestion -->
@@ -95,7 +95,7 @@
 	                android:paddingRight="30dp"
 	                android:paddingTop="15dp"
 	                android:text="Sub Question"
-	                android:textAppearance="?android:attr/textAppearanceMedium"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
 	                android:textColor="@android:color/black"
 	                android:textStyle="normal|bold" >
 	            </TextView>
@@ -126,7 +126,8 @@
 	                android:progress="0"
 	                android:progressDrawable="@drawable/seek_bar_progress"
 	                android:secondaryProgress="0"
-	                android:thumb="@drawable/seek_bar_thumb_normal" >
+	                android:thumb="@drawable/seek_bar_thumb_normal"
+	                android:layout_marginBottom="100dp" >
 	            </SeekBar>
 	
 	
@@ -144,7 +145,7 @@
 	                android:paddingRight="30dp"
 	                android:paddingTop="15dp"
 	                android:text="Answer Info"
-	                android:textAppearance="?android:attr/textAppearanceMedium"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
 	                android:textColor="@android:color/black"
 	                android:textStyle="normal|bold" >
 	            </TextView>
@@ -162,7 +163,7 @@
 	                android:paddingRight="30dp"
 	                android:paddingTop="15dp"
 	                android:text="Choose from the scale.\nTap next when you\'re done."
-	                android:textAppearance="?android:attr/textAppearanceSmall"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
 	                android:textColor="@android:color/black"
 	                android:textStyle="normal|bold" >
 	            </TextView>
@@ -171,7 +172,7 @@
 	                android:id="@+id/surevy_item_picture_border"
 	                android:layout_width="match_parent"
 	                android:layout_height="wrap_content"
-	                android:paddingBottom="40dp" 
+	                android:paddingBottom="60dp" 
 	                android:layout_alignBottom="@id/survey_frequency_slider_label_image_view"
 	            />
 	            
