@@ -6,7 +6,7 @@
     android:fitsSystemWindows="false"
     tools:context="${packageName}.${activityClass}" >
     
-    <objects.TitleBar
+  	<objects.TitleBar
         android:id="@+id/titlebar"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content" />
@@ -14,11 +14,11 @@
     <TextView android:id="@+id/siteName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:text="@string/siteName"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:layout_below="@id/titlebar" />
 
@@ -27,18 +27,18 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/siteName"
         android:layout_below="@id/siteName"
-        android:textSize="12sp"
-        android:text="" />
+        android:textSize="25sp"
+        android:text="Site" />
 
     <TextView android:id="@+id/Municipality"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/siteName"
         android:layout_below="@id/nameOfSite"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
         android:text="Municipality"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView android:id="@+id/nameOfMun"
@@ -46,19 +46,19 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/siteName"
         android:layout_below="@+id/Municipality"
-        android:textSize="12sp"
-        android:text="" />
+        android:textSize="25sp"
+        android:text="Municipality" />
 
     <TextView android:id="@+id/date_created"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/siteName"
         android:layout_below="@id/nameOfMun"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
         android:text="Date Created"
         android:textStyle="bold"
-        android:textSize="18sp" />
+        android:textSize="30sp" />
     
     <TextView
         android:id="@+id/nameOfDate"
@@ -66,8 +66,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/date_created"
         android:layout_below="@id/date_created"
-        android:textSize="12sp"
-        android:text="" />
+        android:textSize="25sp"
+        android:text="Date" />
 
     <TextView
         android:id="@+id/ave_Score"
@@ -76,23 +76,13 @@
         android:layout_alignParentRight="true"
         android:layout_below="@id/titlebar"
         android:background="@drawable/ave_scr_bg_color_na_tile"
-        android:paddingBottom="35sp"
-        android:paddingLeft="25sp"
-        android:paddingRight="25sp"
-        android:paddingTop="25sp"
+        android:paddingBottom="55sp"
+        android:paddingLeft="40sp"
+        android:paddingRight="40sp"
+        android:paddingTop="40sp"
         android:text="@string/not_applicable"
-        android:textSize="40sp"
+        android:textSize="60sp"
         android:textColor="#000000" />
-
-    <TextView
-        android:id="@+id/averageScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/Municipality"
-        android:layout_marginRight="15dp"
-        android:layout_alignParentRight="true"
-        android:text="Average Score"
-        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/surveyScore"
@@ -101,15 +91,15 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/nameOfDate"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:background="#006334"
         android:fitsSystemWindows="true"
-        android:paddingBottom="5sp"
+        android:paddingBottom="15sp"
         android:paddingLeft="13sp"
-        android:paddingTop="5sp"
+        android:paddingTop="15sp"
         android:text="Survey Score"
         android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
     
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -119,34 +109,36 @@
         <RelativeLayout android:id="@+id/exposureContainer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp" >
+            android:padding="20dp" >
             
             <TextView android:id="@+id/exposureScore"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:gravity="center"
                 android:text="@string/not_applicable"
                 android:background="@drawable/ave_scr_bg_color_na_tile"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold" />
             
             <TextView android:id="@+id/exposureTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/exposure_all_caps"
-                android:textSize="15sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 android:layout_toRightOf="@id/exposureScore"
-                android:paddingLeft="3dp" />
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
             
             <TextView android:id="@+id/exposureSubTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="18sp"
                 android:text="@string/undefined"
                 android:layout_below="@id/exposureTitle"
                 android:layout_toRightOf="@id/exposureScore"
-                android:paddingLeft="3dp" />
+                android:paddingLeft="5dp" />
             
             <ImageView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -163,34 +155,36 @@
         <RelativeLayout android:id="@+id/sensitivityContainer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp" >
+            android:padding="20dp" >
             
             <TextView android:id="@+id/sensitivityScore"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:gravity="center"
                 android:text="@string/not_applicable"
                 android:background="@drawable/ave_scr_bg_color_na_tile"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold" />
             
             <TextView android:id="@+id/sensitivityTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sensitivity_all_caps"
-                android:textSize="15sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 android:layout_toRightOf="@id/sensitivityScore"
-                android:paddingLeft="3dp" />
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
             
             <TextView android:id="@+id/sensitivitySubTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="18sp"
                 android:text="@string/undefined"
                 android:layout_below="@id/sensitivityTitle"
                 android:layout_toRightOf="@id/sensitivityScore"
-                android:paddingLeft="3dp" />
+                android:paddingLeft="5dp" />
             
             <ImageView android:id="@+id/site_details_sensitivity_survey_button"
                 android:layout_width="wrap_content"
@@ -208,34 +202,36 @@
         <RelativeLayout android:id="@+id/adaptiveCapacityContainer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp" >
+            android:padding="20dp" >
             
             <TextView android:id="@+id/adaptiveCapacityScore"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:gravity="center"
                 android:text="@string/not_applicable"
                 android:background="@drawable/ave_scr_bg_color_na_tile"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold" />
             
             <TextView android:id="@+id/adaptiveCapacityTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ADAPTIVE CAPACITY"
-                android:textSize="15sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 android:layout_toRightOf="@id/adaptiveCapacityScore"
-                android:paddingLeft="3dp" />
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
             
             <TextView android:id="@+id/adaptiveCapacitySubTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="18sp"
                 android:text="Undefined"
                 android:layout_below="@id/adaptiveCapacityTitle"
                 android:layout_toRightOf="@id/adaptiveCapacityScore"
-                android:paddingLeft="3dp" />
+                android:paddingLeft="5dp" />
             
             <ImageView android:id="@+id/site_details_adaptive_capacity_survey_button"
                 android:layout_width="wrap_content"
@@ -256,15 +252,25 @@
             android:textColor="#c0c0c0"
             android:textStyle="bold"
             android:text="IMPORT"
+            android:textSize="20sp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"
             android:background="#000000" />
         
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/averageScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/Municipality"
+        android:layout_marginRight="25dp"
+        android:text="Average Score"
+        android:textSize="20sp" />
 
 </RelativeLayout>
