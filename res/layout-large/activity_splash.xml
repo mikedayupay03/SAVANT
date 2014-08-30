@@ -8,9 +8,20 @@
     <TextView android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SAVANT"
-        android:textSize="40sp"
+        android:textSize="70sp"
         android:textColor="#F0F0F0"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:layout_centerVertical="true"
+        android:layout_below="@id/dlsuccslogo"
+        android:layout_marginTop="30dp" />
+
+    <ImageView
+        android:id="@+id/dlsuccslogo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/splash_page_dlsu_logo_png" />
 
 </RelativeLayout>

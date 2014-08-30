@@ -5,10 +5,10 @@
     android:focusable="true"
     tools:context="${packageName}.${activityClass}" >
     
-    <objects.TitleBar
+   <!--  <objects.TitleBar
         android:id="@+id/titlebar"
 	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content" />
+	    android:layout_height="wrap_content" /> -->
     
     <TextView android:id="@+id/siteName"
         android:layout_width="wrap_content"
